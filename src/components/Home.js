@@ -6,6 +6,8 @@ import RightCouple from "./RightCouple";
 import RightLocation from "./RightLocation";
 import RightAmplop from "./RightAmplop";
 import RightGallery from "./RightGallery";
+import RightComment from "./RightComment";
+import RightFooter from "./RightFooter";
 import "../assets/style/home.css"
 import { Carousel } from 'react-responsive-carousel';
 import leftImage2 from "../assets/image/leftImage2.jpg"
@@ -73,6 +75,8 @@ const Home = () => {
                     <RightLocation/>
                     <RightAmplop/>
                     <RightGallery/>
+                    <RightComment/>
+                    <RightFooter/>
                 </div>
             </div>
         </div>

@@ -1,0 +1,14 @@
+.wrapperFooterAll{
+    background-color: pink;
+    width: 100%;
+    height: 200px;
+}
+
+.footerAll{
+    width: 100%;
+    height: 80%;
+}
+
+.footerRightFooter{
+    width: 100%;
+}

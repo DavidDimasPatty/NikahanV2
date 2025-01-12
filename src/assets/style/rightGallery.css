@@ -16,8 +16,9 @@
 }
 
 .imageCarrouselRight img {
+    width: 500px;
+    height: 1000px;
     object-fit: cover;
-    border-radius: 0 0 0 0;
 }
 
 .tittleGallery {
