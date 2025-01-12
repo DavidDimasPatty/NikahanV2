@@ -1,0 +1,106 @@
+.wrapperLocationRight {
+    width: 100%;
+}
+
+.customCardRight {
+    position: relative;
+    width: 75%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.customCardRight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../image/leftImage5.jpg");
+    background-size: cover;
+    filter: blur(2px);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.customCardRight .pemberkatanRight,
+.customCardRight .resepsiRight {
+    z-index: 4;
+}
+
+.pemberkatanRight{
+    color: black;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 20px;
+}
+
+.titlePemberkatan{
+    font-size: 20px;
+}
+
+.titlePernikahanPemberkatan{
+    z-index: 2;
+    font-size: 30px;
+}
+
+.descPemberkatan{
+    width: 100%;
+}
+
+.buttonPemberkatanWrapper{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.buttonPemberkatan{
+    width: 50%;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.resepsiRight{
+    color: black;
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin: 20px;
+    top: 90px;
+}
+
+
+.titleResepsi{
+    font-size: 20px;
+    text-align: end;
+}
+
+.titlePernikahanResepsi{
+    z-index: 2;
+    font-size: 30px;
+    text-align: end;
+}
+
+.descResepsi{
+    width: 100%;
+    text-align: end;
+}
+
+.buttonResepsiWrapper{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.buttonResepsi{
+    width: 50%;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+}

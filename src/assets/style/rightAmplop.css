@@ -1,0 +1,61 @@
+.wrapperAmplopAll {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.amplopAll {
+    width: 100%;
+    height: 100%;
+}
+
+.amplopTitle {
+    font-size: 20px;
+    text-align: center;
+}
+
+.amplopDesc {
+    width: 100%;
+    text-align: center;
+    padding: 0px 40px;
+    font-size: 15px;
+}
+
+.amplopCard {
+    width: 350px;
+    height: 200px;
+    background-color: rgb(202, 87, 135);
+    border-radius: 20px;
+}
+
+.wrapperCopyNoBankButton {
+    width: 100%;
+}
+
+.copyNoBankButton {
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+}
+
+.namaBank{
+    color: white;
+    padding: 20px;
+}
+
+.logoBank{
+    width: 90px;
+    filter: grayscale(100%) brightness(350%);
+}
+
+.atasNamaBank
+{
+    letter-spacing: 3px;
+    color: white;
+}
+
+.nomorRekeningBank{
+    letter-spacing: 2px;
+    color: white;
+}

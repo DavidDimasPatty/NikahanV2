@@ -1,0 +1,52 @@
+
+.rightWelcome {
+    height: 100%;
+    width: 100%;
+}
+
+.imgWelcomeRight {
+    width: 100%;
+    height: 100%;
+}
+
+
+.imgWelcomeRight img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 100px 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    object-fit: cover;
+}
+
+.wrapperTextWelcomeRight {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   bottom: 80px;
+   width: 100%;
+}
+
+.textWelcomeRight{
+    text-align: center;
+    color: white;
+}
+
+.countdownRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+}
+
+.time-box{
+    background-color: pink;
+    margin-right: 10px;
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 12px;
+}
