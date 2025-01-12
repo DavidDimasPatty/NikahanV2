@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../assets/style/rightFooter.css"
+import instagram from "../assets/image/instagram.png"
 
 const RightFooter = () => {
 
@@ -12,6 +13,9 @@ const RightFooter = () => {
                     </div>
                     <div className="text-center">
                         iKōdora
+                    </div>
+                    <div className="logoIgWrapper text-center mt-2">
+                        <img src={instagram} className="logoIg"/>
                     </div>
                     <div className="text-center mt-3">
                         Backsound By:
