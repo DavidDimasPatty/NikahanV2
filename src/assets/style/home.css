@@ -38,7 +38,7 @@
     overflow-x: hidden;
     width: 40%;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     position: relative;
 }
 

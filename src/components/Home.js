@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
+import {useLocation} from "react-router-dom";
 import Cover from "./Cover";
 import RightWelcome from "./RightWelcome";
+import Floating from "./Floating";
 import RightQuotes from "./RightQuotes";
 import RightCouple from "./RightCouple";
 import RightLocation from "./RightLocation";
@@ -21,13 +23,42 @@ import leftImage9 from "../assets/image/leftImage9.jpg"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Home = () => {
     const [frontWelcome, setFrontWelcome] = useState(true);
+    const path = window.location.pathname; 
+    const segment = path.split('/').filter(Boolean);
+    const [isDown, setIsDown] = useState(true);
+    const scrollContainerRef = useRef(null); 
 
     const toggleFront = () => {
         setFrontWelcome(!frontWelcome);
     }
+
+    const handleScroll = () => {
+        const scrollThresholdInVh = 50; 
+        const thresholdInPx = (scrollThresholdInVh / 100) * window.innerHeight;
+        const scrollTop = scrollContainerRef.current.scrollTop;
+        setIsDown((prevIsDown) => {
+            const newValue = scrollTop <= thresholdInPx; 
+            return newValue;
+        });
+    };
+
+    useEffect(() => {
+        const scrollContainer = scrollContainerRef.current;
+        if (scrollContainer) {
+            scrollContainer.addEventListener('scroll', handleScroll);
+        }
+
+        return () => {
+            if (scrollContainer) {
+                scrollContainer.removeEventListener('scroll', handleScroll);
+            }
+        };
+    }, []);
+
     return (
         <div className="homeAll">
-            <Cover onDone={toggleFront} frontWelcome={frontWelcome} />
+            <Cover onDone={toggleFront} frontWelcome={frontWelcome} guest={segment} />
+            <Floating scroll={isDown} scrollContainerRef={scrollContainerRef}/>
             <div className="contentAll">
                 <div className="leftContent">
                     <div className="colCarrousel">
@@ -68,7 +99,7 @@ const Home = () => {
                         </Carousel>
                     </div>
                 </div>
-                <div className="rightContent">
+                <div className="rightContent"  ref={scrollContainerRef} >
                     <RightWelcome/>
                     <RightQuotes/>
                     <RightCouple/>

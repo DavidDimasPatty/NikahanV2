@@ -1,0 +1,62 @@
+.logoFloat {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    z-index: 200;
+}
+
+
+.logoMusic {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.logoMusic button {
+    width: 50%;
+    height: 50%;
+    background-color: pink;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.logo-circ {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circ a {
+    width: 50%;
+    height: 50%;
+    background-color: pink;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowUp {
+    width: 100%;
+}
+
+.rowUpDiv {
+    opacity: 0;
+    transition: 0.8s ease all;
+    visibility: hidden;
+}
+
+.rowUpDiv.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.8s ease all;
+    cursor: pointer;
+}
