@@ -1,120 +1,256 @@
-.wrapperCommentRight {
-    width: 100%;
-    margin: 30px 0 50px 0;
+.wrapperCommentRightInduk {
 
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+    margin: 0;
+    background: whitesmoke;
+    font-family: BrandonGrotesque;
 
-    .commentForm {
-        margin-bottom: 30px;
-    }
-
-    .commentForm .titleCommentForm {
-        margin-bottom: 15px;
-        color: #000;
-        text-align: center;
-    }
-
-    .commentForm textarea {
+    .wrapperCommentRight {
         width: 100%;
-        height: 80px;
-        padding: 10px;
-        margin-bottom: 0;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 14px;
-        resize: none;
-    }
-
-    .commentForm select {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 14px;
-        background-color: #fff;
-    }
-
-    .commentForm button {
-        display: block;
-        width: 100%;
-        padding: 10px 15px;
-        background-color: #007bff;
-        color: #fff;
-        font-size: 14px;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .commentForm button:hover {
-        background-color: #0056b3;
-    }
-
-    /* Daftar komentar */
-    .commentsList h2 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        color: #333;
-    }
-
-    .commentsList p {
-        color: #555;
-        font-size: 14px;
-    }
-
-    /* Item komentar */
-    .commentItem {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 15px;
-        margin-bottom: 15px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    .commentItem h4 {
         margin: 0;
-        font-size: 16px;
-        color: #007bff;
-    }
 
-    .commentItem p {
-        margin: 10px 0;
-        color: #333;
-        font-size: 14px;
-    }
+        padding: 20px;
+        background: rgb(224, 204, 215);
+        border-radius: 100px 100px 0px 0px;
 
-    .commentItem small {
-        display: block;
-        margin-top: 10px;
-        font-size: 12px;
-        color: #777;
-    }
-
-    /* Responsif untuk layar kecil */
-    @media (max-width: 768px) {
-        .wrapperCommentRight {
-            padding: 15px;
+        .commentForm {
+            margin-bottom: 30px;
+            width: 100%;
         }
 
-        .commentForm textarea,
-        .commentForm select {
-            font-size: 12px;
+        .commentForm .titleCommentForm {
+            margin-bottom: 15px;
+            color: #4b4b4b;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
         }
 
-        .commentItem h4 {
+        .commentForm textarea {
+            width: 80%;
+            height: 80px;
+            padding: 15px 20px 15px 20px;
+            margin-bottom: 5px;
+            border: 1px solid rgb(202, 87, 135);
+            border-radius: 20px;
             font-size: 14px;
+            resize: none;
+            background-color: whitesmoke;
+            color: #4b4b4b;
         }
 
-        .commentItem p {
-            font-size: 13px;
+        .commentForm select {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(202, 87, 135);
+            border-radius: 15px;
+            font-size: 14px;
+            background-color: whitesmoke;
+            color: #4b4b4b;
+        }
+
+        .commentForm textarea:focus {
+            border: 2px solid rgb(202, 87, 135);
+            outline: none;
+        }
+
+        .commentForm select:focus {
+            border: 2px solid rgb(202, 87, 135);
+            outline: none;
+        }
+
+        .commentForm button {
+            display: block;
+            width: 80%;
+            padding: 10px 15px;
+            background-color: rgb(202, 87, 135);
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .commentForm button:hover {
+            background-color: rgb(184, 44, 102);
+            color: white;
+        }
+
+        .commentForm button:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .alert-box {
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px auto;
+            margin-top: 0;
+            max-width: 400px;
+            text-align: center;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .alert-box.success {
+            background-color: inherit;
+            color: green;
+        }
+
+        .alert-box.error {
+            background-color: inherit;
+            color: red;
+        }
+
+        .alert-box.hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .alert-box {
+            animation: fadeInComment 0.5s ease-in-out;
+        }
+
+        .comments-container {
+            color: #4b4b4b;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .comments-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comments-closed-message {
+            font-size: 14px;
+            color: white;
+            background-color: rgb(251, 159, 174);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .comments-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        /* Gaya untuk scrollbar */
+        .comments-list::-webkit-scrollbar {
+            width: 12px;
+            border-radius: 10px;
+        }
+
+        .comments-list::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .comments-list::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            border: 2px solid rgba(201, 104, 157, 0.3);
+        }
+
+        .comments-list::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .comment-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comment-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: whitesmoke;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .comment-name {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .comment-time {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .comment-text {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .comment-kehadiran {
+            font-size: 12px;
+            color: #999;
+            font-weight: bold;
+        }
+
+        .comments-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .comments-pagination a {
+            text-decoration: none;
+            color: rgb(251, 159, 174);
+            font-size: 14px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .comments-pagination a:hover {
+            background-color: rgb(251, 159, 174);
+            color: white;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            .wrapperCommentRight {
+                padding: 15px;
+
+                .commentForm textarea,
+                .commentForm select {
+                    font-size: 12px;
+                }
+
+            }
         }
     }
+}
 
+@keyframes fadeInComment {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
