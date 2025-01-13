@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Cover from "./Cover";
 import RightWelcome from "./RightWelcome";
 import Floating from "./Floating";
@@ -20,26 +20,49 @@ import leftImage6 from "../assets/image/leftImage6.jpg"
 import leftImage7 from "../assets/image/leftImage7.jpg"
 import leftImage8 from "../assets/image/leftImage8.jpg"
 import leftImage9 from "../assets/image/leftImage9.jpg"
+import backSound from "../assets/song/backSoundTemp.mp3"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Home = () => {
     const [frontWelcome, setFrontWelcome] = useState(true);
-    const path = window.location.pathname; 
+    const path = window.location.pathname;
     const segment = path.split('/').filter(Boolean);
     const [isDown, setIsDown] = useState(true);
-    const scrollContainerRef = useRef(null); 
+    const scrollContainerRef = useRef(null);
+
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     const toggleFront = () => {
         setFrontWelcome(!frontWelcome);
+        playAudio();
     }
 
+    const togglePlay = () => {
+        if (isPlaying) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.play();
+        }
+        setIsPlaying(!isPlaying);
+    };
+
     const handleScroll = () => {
-        const scrollThresholdInVh = 50; 
+        const scrollThresholdInVh = 50;
         const thresholdInPx = (scrollThresholdInVh / 100) * window.innerHeight;
         const scrollTop = scrollContainerRef.current.scrollTop;
         setIsDown((prevIsDown) => {
-            const newValue = scrollTop <= thresholdInPx; 
+            const newValue = scrollTop <= thresholdInPx;
             return newValue;
         });
+    };
+
+    const playAudio = async () => {
+        try {
+            await audioRef.current.play();
+            setIsPlaying(true);
+        } catch (error) {
+            console.error("Auto-play dicegah oleh browser:", error);
+        }
     };
 
     useEffect(() => {
@@ -53,15 +76,42 @@ const Home = () => {
                 scrollContainer.removeEventListener('scroll', handleScroll);
             }
         };
+
     }, []);
 
     return (
         <div className="homeAll">
             <Cover onDone={toggleFront} frontWelcome={frontWelcome} guest={segment} />
-            <Floating scroll={isDown} scrollContainerRef={scrollContainerRef}/>
+            <Floating scroll={isDown} scrollContainerRef={scrollContainerRef} tooglePlay={togglePlay} isPlaying={isPlaying} />
             <div className="contentAll">
+                <audio ref={audioRef} src={backSound} preload="auto" autoPlay loop />
                 <div className="leftContent">
                     <div className="colCarrousel">
+                        <div className="contentLeft">
+                            <div>
+                                <div className="leftTop">
+                                    <div className="leftTopTop">
+                                        Our Wedding Invitation
+                                    </div>
+                                    <div className="leftMidTop">
+                                        Fendy Santoso & Bumi Ayu
+                                    </div>
+                                </div>
+                                <div className="leftMid">
+                                    <div className="leftMidBottom">
+                                       
+                                    </div>
+                                </div>
+                                <div className="leftBottom">
+                                    <div className="leftBottomTop">
+                                        Kepada Yth. Bapak / Ibu /Saudara/i
+                                    </div>
+                                    <div className="leftBottomBottom">
+                                        {segment}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <Carousel
                             showArrows={false}
                             showIndicators={false}
@@ -99,15 +149,15 @@ const Home = () => {
                         </Carousel>
                     </div>
                 </div>
-                <div className="rightContent"  ref={scrollContainerRef} >
-                    <RightWelcome/>
-                    <RightQuotes/>
-                    <RightCouple/>
-                    <RightLocation/>
-                    <RightAmplop/>
-                    <RightGallery/>
-                    <RightComment/>
-                    <RightFooter/>
+                <div className="rightContent" ref={scrollContainerRef} >
+                    <RightWelcome />
+                    <RightQuotes />
+                    <RightCouple />
+                    <RightLocation />
+                    <RightAmplop />
+                    <RightGallery />
+                    <RightComment />
+                    <RightFooter />
                 </div>
             </div>
         </div>

@@ -15,13 +15,13 @@ const RightFooter = () => {
                         iKōdora
                     </div>
                     <div className="logoIgWrapper text-center mt-2">
-                        <img src={instagram} className="logoIg"/>
+                        <img src={instagram} className="logoIg" />
                     </div>
                     <div className="text-center mt-3">
                         Backsound By:
                     </div>
                     <div className="text-center">
-                        Nama Lagu - Nama Artis
+                        ANDMESH - ANUGERAH TERINDAH
                     </div>
                 </div>
             </div>

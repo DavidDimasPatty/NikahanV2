@@ -1,8 +1,29 @@
-.coupleRight {}
+.wrapperCoupleRight {
+    background-color: rgb(224, 204, 215);
+    width: 100%;
+    height: 100%;
+}
+
+.coupleRight {
+    background-image: url("../image/BackgroundImage/bgAll.png"); 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: cover;
+    border-radius: 100px 100px 0px 0px;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
 
 .titleCoupleRight {
     text-align: center;
     width: 100%;
+    font-size: 24px;
+    font-family: BrandonGrotesque;
+    font-weight: 500;
+    color: pink;
+    -webkit-text-stroke: 0.2px black;
 }
 
 .manRight {
@@ -26,7 +47,7 @@
     width: 100%;
 }
 
-.parentManRight{
+.parentManRight {
     text-align: center;
     padding: 20px;
 }
@@ -52,7 +73,7 @@
     width: 100%;
 }
 
-.womanManRight{
+.womanManRight {
     text-align: center;
     padding: 20px;
 }
@@ -61,7 +82,7 @@
     width: 100%;
 }
 
-.parentWomanRight{
+.parentWomanRight {
     text-align: center;
     padding: 20px;
 }

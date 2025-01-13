@@ -1,7 +1,9 @@
 .wrapperAmplopAll {
     width: 100%;
     height: 400px;
-    margin-top: 20px;
+    background-color: white;
+    z-index: 10px;
+    background-color: rgb(224, 204, 215);
 }
 
 .amplopAll {

@@ -42,4 +42,89 @@
     position: relative;
 }
 
+.rightContent::-webkit-scrollbar {
+    width: 12px;
+    padding: 10px;
+    border-radius: 10px;
+}
 
+.rightContent::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.rightContent::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border: 2px solid rgba(201, 104, 157, 0.3);
+}
+
+.rightContent::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.contentLeft {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.leftTop {
+    font-family: BrandonGrotesque;
+    font-weight: bolder;
+    color: pink;
+    -webkit-text-stroke: 0.5px black;
+}
+
+
+.leftTopTop {
+    font-size: 36px;
+    letter-spacing: 4px;
+}
+
+.leftMidTop {
+    font-size: 50px;
+    font-family: BrandonGrotesque;
+    font-weight: bolder;
+    color: pink;
+    -webkit-text-stroke: 0.5px black
+}
+
+.leftMid {
+    margin-top: 20px;
+    width: 75%;
+}
+
+.leftMidBottom {
+    height: 200px;
+    font-size: 20px;
+    font-family: BrandonGrotesque;
+    font-weight: bolder;
+    color: pink;
+    -webkit-text-stroke: 0.1px black
+}
+
+.leftBottom {
+    margin-top: 30px;
+}
+
+.leftBottomTop{
+    font-size: 26px;
+    font-family: BrandonGrotesque;
+    font-weight: bold;
+    color: pink;
+    -webkit-text-stroke: 0.4px black
+}
+
+.leftBottomBottom{
+    font-size: 40px;
+    font-family: BrandonGrotesque;
+    font-weight: bolder;
+    color: pink;
+    -webkit-text-stroke: 0.5px black
+}

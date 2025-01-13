@@ -36,10 +36,17 @@ const RightWelcome = () => {
 
                 <div className="textWelcomeRight">
                     <div className="rightWelcomeTop">
-                        Our Wedding
+                        <svg width="300" height="100" viewBox="0 0 200 100">
+                            <path id="curve" d="M 10 100 Q 100 -10 250 100" fill="transparent" />
+                            <text>
+                                <textPath href="#curve" startOffset="50%" text-anchor="middle" class="stroked-text">
+                                    Our Weeding
+                                </textPath>
+                            </text>
+                        </svg>
                     </div>
                     <div className="rightWelcomeMid">
-                        Nama Cewe & Nama Cowo
+                        Fendy Santoso & Bumi Ayu
                     </div>
                     <div className="rightWelcomeBottom">
                         2 Febuari 2024
@@ -48,20 +55,28 @@ const RightWelcome = () => {
             </div>
             <div className="countdownRight">
                 <div className="time-box">
-                    <span>{timeLeft.days}</span>
-                    <div>Hari</div>
+                    <div>
+                        <span>{timeLeft.days}</span>
+                        <div>Hari</div>
+                    </div>
                 </div>
                 <div className="time-box">
-                    <span>{timeLeft.hours}</span>
-                    <div>Jam</div>
+                    <div>
+                        <span>{timeLeft.hours}</span>
+                        <div>Jam</div>
+                    </div>
                 </div>
                 <div className="time-box">
-                    <span>{timeLeft.minutes}</span>
-                    <div>Menit</div>
+                    <div>
+                        <span>{timeLeft.minutes}</span>
+                        <div>Menit</div>
+                    </div>
                 </div>
                 <div className="time-box">
-                    <span>{timeLeft.seconds}</span>
-                    <div>Detik</div>
+                    <div>
+                        <span>{timeLeft.seconds}</span>
+                        <div>Detik</div>
+                    </div>
                 </div>
             </div>
         </div>

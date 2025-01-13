@@ -47,7 +47,7 @@ const RightCouple = () => {
                     </div>
 
                     <div className="descWomanRight mt-4 d-flex justify-content-center align-items-center">
-                        Fendy Santoso
+                        Bumi Ayu
                     </div>
 
                     <div className="parentWomanRightWrapper mt-4 d-flex justify-content-center align-items-center">
