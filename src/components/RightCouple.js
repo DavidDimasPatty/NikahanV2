@@ -3,13 +3,24 @@ import "../assets/style/rightCouple.css"
 import womanPhoto from "../assets/image/girlPhoto.jpg"
 import manPhoto from "../assets/image/boyPhoto.jpg"
 import coupleDiamond from "../assets/image/coupleDiamond.png"
-import namaMan from "../assets/image/namaMan.png"
-import namaWoman from "../assets/image/namaWoman.png"
-
+import gifLove1 from "../assets/gif/gifLove.gif"
+import gifLove2 from "../assets/gif/gifLove2.gif"
+import gifLove3 from "../assets/gif/gifLove3.gif"
+import pinkRibbon from "../assets/image/BackgroundImage/pinkRebon.png"
+import balon1 from "../assets/image/BackgroundImage/baloon-removebg-preview.png"
+import balon3 from "../assets/image/BackgroundImage/baloon3-removebg-preview.png"
 const RightCouple = () => {
 
     return (
         <div className="wrapperCoupleRight d-flex justify-content-center align-items-center">
+
+            {/* <div className="gif1Woman">
+                <img src={gifLove1} className="gifLove1Woman" />
+            </div>
+            <div className="gif3Woman">
+                <img src={gifLove3} className="gifLove3Woman"/>
+            </div> */}
+
             <div className="coupleRight">
                 <div className="titleCoupleRight d-flex justify-content-center align-items-center">
                     <div>
@@ -19,12 +30,44 @@ const RightCouple = () => {
                     </div>
                 </div>
 
+                <div className="pinkRibbon">
+                    <img src={pinkRibbon} className="pinkRibbonImg" />
+                </div>
+
+                <div className="balon1">
+                    <img src={balon1} className="balon1Img" />
+                </div>
+
+                <div className="balon11">
+                    <img src={balon1} className="balon11Img" />
+                </div>
+
+                <div className="balon3">
+                    <img src={balon3} className="balon3Img" />
+                </div>
+
+                <div className="balon31">
+                    <img src={balon3} className="balon31Img" />
+                </div>
+
+
                 <div className="manRight">
-                    <div className="textGroom d-flex justify-content-center align-items-center">
-                        The Groom
+                    <div className="textGroom d-flex justify-content-center align-items-center mb-4">
+                        <div>
+                            <div className="text-center"> <b>The Groom</b></div>
+                            <div className="leftBorderGroom"></div>
+                        </div>
                     </div>
                     <div className="manPhotoWrapper d-flex justify-content-center align-items-center">
-                        <img src={manPhoto} className="manPhoto" />
+                        <div>
+                            <img src={manPhoto} className="manPhoto" />
+                            <div className="gif1Man">
+                                <img src={gifLove1} className="gifLove1Man" />
+                            </div>
+                            <div className="gif3Man">
+                                <img src={gifLove3} className="gifLove3Man" />
+                            </div>
+                        </div>
                     </div>
 
                     <div className="descManRight mt-4 d-flex justify-content-center align-items-center">
@@ -37,6 +80,7 @@ const RightCouple = () => {
                             <div>Mr. Fam Djan Lim (✟) & Mrs. Bong Djan Lie</div>
                         </div>
                     </div>
+
                 </div>
 
                 <div className="rightAnd text-center mb-4 d-flex justify-content-center align-items-center">
@@ -46,11 +90,22 @@ const RightCouple = () => {
                 </div>
 
                 <div className="womanRight">
-                    <div className="textBride d-flex justify-content-center align-items-center">
-                        The Bride
+                    <div className="textBride d-flex justify-content-center align-items-center mb-4">
+                        <div>
+                            <div className="text-center"> <b>The Bride</b></div>
+                            <div className="leftBorderGroom"></div>
+                        </div>
                     </div>
                     <div className="womanPhotoWrapper d-flex justify-content-center align-items-center">
-                        <img src={womanPhoto} className="manPhoto" />
+                        <div>
+                            <img src={womanPhoto} className="manPhoto" />
+                            <div className="gif1Woman">
+                                <img src={gifLove1} className="gifLove1Woman" />
+                            </div>
+                            <div className="gif3Woman">
+                                <img src={gifLove3} className="gifLove3Woman" />
+                            </div>
+                        </div>
                     </div>
 
                     <div className="descWomanRight mt-4 d-flex justify-content-center align-items-center">

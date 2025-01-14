@@ -11,7 +11,7 @@ const RightAmplop = () => {
                     Wedding Gift
                 </div>
                 <div className="amplopDesc d-flex justify-content-center align-items-center mb-4">
-                    Bagi keluarga dan sahabat yang ingin mengirimkan hadiah, silakan mengirimkannya melalui tautan berikut:
+                    <b>Bagi keluarga dan sahabat yang ingin mengirimkan hadiah, silakan mengirimkannya melalui tautan berikut:</b>
                 </div>
                 <div className="wrapperAmplopCard d-flex justify-content-center align-items-center mb-3">
                     <div className="amplopCard">
