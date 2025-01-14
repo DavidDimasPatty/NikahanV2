@@ -12,6 +12,62 @@ const RightComment = ({ guest }) => {
     const [tipePesan, setTipePesan] = useState(""); // "success" atau "error"
     const [isVisible, setIsVisible] = useState(false);
 
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10; // Atur jumlah item per halaman
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentData = comments.slice(startIndex, endIndex);
+
+    const goToPage = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
+    const totalPages = Math.ceil(comments.length / itemsPerPage);
+
+    const renderPagination = () => {
+        const maxPagesToShow = 3; // Atur jumlah halaman yang ingin ditampilkan
+        let startPage = Math.max(currentPage - Math.floor(maxPagesToShow / 2), 1);
+        let endPage = startPage + maxPagesToShow - 1;
+
+        // Pastikan endPage tidak melebihi total halaman
+        if (endPage > totalPages) {
+            endPage = totalPages;
+            startPage = Math.max(endPage - maxPagesToShow + 1, 1);
+        }
+
+        return (
+            <div className="comments-pagination">
+                <button
+                    onClick={() => goToPage(currentPage - 1)}
+                    disabled={currentPage === 1} // Disable tombol Prev jika halaman pertama aktif
+                >
+                    ← Previous
+                </button>
+                {Array.from({ length: endPage - startPage + 1 }, (_, index) => {
+                    const pageNumber = startPage + index;
+                    return (
+                        <button
+                            key={pageNumber}
+                            onClick={() => goToPage(pageNumber)}
+                            className={currentPage === pageNumber ? "active" : ""}
+                        >
+                            {pageNumber}
+                        </button>
+                    );
+                })}
+                <button
+                    onClick={() => goToPage(currentPage + 1)}
+                    disabled={currentPage === totalPages} // Disable tombol Next jika halaman terakhir aktif
+                >
+                    Next →
+                </button>
+            </div>
+        );
+    };
+    // End Pagination
+
     // Fungsi untuk submit form
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -115,45 +171,46 @@ const RightComment = ({ guest }) => {
                     )}
                 </form>
 
-                <div className="comments-container">
-                    <div className="comments-header">
-                        <h4>{comments.length} Ucapan</h4>
-                    </div>
-                    {comments.length === 0 ? (
-                        <div className="comments-closed-message">
-                            Belum ada ucapan, jangan malu untuk menulis sesuatu! 😊
+                <div className="d-flex justify-content-center">
+                    <div className="comments-container">
+                        <div className="comments-header">
+                            <h4>{comments.length} Ucapan</h4>
                         </div>
-                    ) : (
-                        <ul className="comments-list">
-                            {comments.map((comment, index) => (
-                                <li key={index} className="comment-item">
-                                    <div className="comment-icon">🕊️</div>
-                                    <div className="comment-content">
-                                        <div className="comment-name">{comment.Nama}</div>
-                                        <div className="comment-time">
-                                            {comment.Addtime
-                                                ? formatDistanceToNow(parseISO(comment.Addtime), {
-                                                    addSuffix: true,
-                                                })
-                                                : ""}
+                        {currentData.length === 0 ? (
+                            <div className="comments-closed-message">
+                                Belum ada ucapan, jangan malu untuk menulis sesuatu! 😊
+                            </div>
+                        ) : (
+                            <ul className="comments-list">
+                                {currentData.map((comment, index) => (
+                                    <li key={index} className="comment-item">
+                                        <div className="comment-icon">🕊️</div>
+                                        <div className="comment-content">
+                                            <div className="comment-name">{comment.Nama}</div>
+                                            <div className="comment-time">
+                                                {comment.Addtime
+                                                    ? formatDistanceToNow(parseISO(comment.Addtime), {
+                                                        addSuffix: true,
+                                                    })
+                                                    : ""}
+                                            </div>
+                                            <div className="comment-text">{comment.Ucapan}</div>
+                                            <div className="comment-kehadiran">{comment.Konfirmasi_Kehadiran}</div>
                                         </div>
-                                        <div className="comment-text">{comment.Ucapan}</div>
-                                        <div className="comment-kehadiran">{comment.Konfirmasi_Kehadiran}</div>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                    <div className="comments-pagination">
-                        <a href="#prev">← Previous</a>
-                        <a href="#1">1</a>
-                        <a href="#2">2</a>
-                        <a href="#3">3</a>
-                        <a href="#next">Next →</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                        {renderPagination()}
+                        {/* <div className="comments-pagination">
+                            <a href="#prev">← Previous</a>
+                            <a href="#1">1</a>
+                            <a href="#2">2</a>
+                            <a href="#3">3</a>
+                            <a href="#next">Next →</a>
+                        </div> */}
                     </div>
                 </div>
-
-
             </div>
         </div>
     );

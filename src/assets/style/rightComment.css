@@ -119,6 +119,7 @@
             padding: 20px;
             border-radius: 10px;
             border: 1px solid #ddd;
+            width: 80%;
         }
 
         .comments-header {
@@ -143,7 +144,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            max-height: 300px;
+            max-height: 500px;
             overflow-y: scroll;
         }
 
@@ -213,7 +214,7 @@
             gap: 10px;
         }
 
-        .comments-pagination a {
+        .comments-pagination button {
             text-decoration: none;
             color: rgb(251, 159, 174);
             font-size: 14px;
@@ -223,9 +224,22 @@
             transition: all 0.3s;
         }
 
-        .comments-pagination a:hover {
+        .comments-pagination button:hover {
             background-color: rgb(251, 159, 174);
             color: white;
+        }
+
+        .comments-pagination button.active {
+            background-color: rgb(251, 159, 174);
+            color: white;
+            border: none;
+            cursor: default;
+        }
+
+        .comments-pagination button[disabled] {
+            cursor: not-allowed;
+            opacity: 0.6;
+            pointer-events: none;
         }
 
         /* Responsif untuk layar kecil */
