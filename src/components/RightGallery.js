@@ -13,9 +13,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const RightGallery = () => {
     return (
         <div className="wrapperRightGalleryAll">
-            <div className="tittleGallery">
-                Gallery Wedding
-            </div>
             <div className="bridgeGallery">
             </div>
             <div className="rightGalleryAll">

@@ -44,3 +44,11 @@
 .rightGalleryAll .carousel-root .carousel-slider {
     height: 500px !important;
 }
+
+.carousel-root {
+    background-color: whitesmoke !important;
+}
+
+.thumbs-wrapper.axis-vertical{
+    margin: 0 !important;
+}
