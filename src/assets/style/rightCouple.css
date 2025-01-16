@@ -24,13 +24,11 @@
     font-weight: bold;
     color: rgb(247, 137, 155);
     margin-top: 30px;
-    margin-bottom: 50px;
 }
 
 .manRight {
     width: 100%;
     height: 40%;
-    margin-top: 30px;
     overflow: hidden;
 }
 
@@ -212,17 +210,17 @@
 }
 
 .pinkRibbon {
-    height: 100%;
     width: 100%;
+    height: auto;
     position: relative;
 }
 
 .pinkRibbonImg {
-    z-index: 5;
+    height: auto;
     position: absolute;
-    top:-150px;
-    left: -10px;
-    width: 800px;
+    top: -80px;
+    left: 0;
+    object-fit: cover;
 }
 
 
@@ -235,9 +233,9 @@
 .balon1Img {
     z-index: 2;
     position: absolute;
-    top:-150px;
+    top: -150px;
     left: -10px;
-    width:100px;
+    width: 100px;
 }
 
 .balon11 {
@@ -248,9 +246,9 @@
 
 .balon11Img {
     position: absolute;
-    top:-170px;
+    top: -170px;
     left: 30px;
-    width:50px;
+    width: 50px;
 }
 
 .balon3 {
@@ -281,3 +279,5 @@
     width: 250px;
     transform: scaleX(-1) rotate(20deg);
 }
+
+@media (max-width: 1068px) {}
