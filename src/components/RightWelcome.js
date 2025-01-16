@@ -30,7 +30,7 @@ const RightWelcome = () => {
     return (
         <div className="rightWelcome">
             <div className="imgWelcomeRight">
-                <img src={leftImage2} />
+                <img src={leftImage2} className="welcomeRightImg" />
             </div>
             <div className="wrapperTextWelcomeRight">
 

@@ -28,7 +28,6 @@ const Home = () => {
     const segment = path.split('/').filter(Boolean);
     const [isDown, setIsDown] = useState(true);
     const scrollContainerRef = useRef(null);
-
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(true);
 
@@ -71,10 +70,32 @@ const Home = () => {
             scrollContainer.addEventListener('scroll', handleScroll);
         }
 
+        const elements = document.querySelectorAll(".animate-on-scroll");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    } else {
+                        entry.target.classList.remove("visible");
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        elements.forEach((element) => {
+            observer.observe(element);
+        });
+
         return () => {
             if (scrollContainer) {
                 scrollContainer.removeEventListener('scroll', handleScroll);
             }
+            elements.forEach((element) => {
+                observer.unobserve(element);
+            });
         };
 
     }, []);
@@ -99,7 +120,7 @@ const Home = () => {
                                 </div>
                                 <div className="leftMid">
                                     <div className="leftMidBottom">
-                                       
+
                                     </div>
                                 </div>
                                 <div className="leftBottom">
@@ -150,14 +171,14 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="rightContent" ref={scrollContainerRef} >
-                    <RightWelcome />
-                    <RightQuotes />
-                    <RightCouple />
-                    <RightLocation />
-                    <RightAmplop />
-                    <RightGallery />
-                    <RightComment />
-                    <RightFooter />
+                    <RightWelcome  />
+                    <RightQuotes  />
+                    <RightCouple  />
+                    <RightLocation  />
+                    <RightAmplop  />
+                    <RightGallery  />
+                    <RightComment  />
+                    <RightFooter  />
                 </div>
             </div>
         </div>

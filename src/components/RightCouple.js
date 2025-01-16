@@ -58,7 +58,7 @@ const RightCouple = () => {
                             <div className="leftBorderGroom"></div>
                         </div>
                     </div>
-                    <div className="manPhotoWrapper d-flex justify-content-center align-items-center">
+                    <div className="manPhotoWrapper d-flex justify-content-center align-items-center animate-on-scroll">
                         <div>
                             <img src={manPhoto} className="manPhoto" />
                             <div className="gif1Man">
@@ -96,7 +96,7 @@ const RightCouple = () => {
                             <div className="leftBorderGroom"></div>
                         </div>
                     </div>
-                    <div className="womanPhotoWrapper d-flex justify-content-center align-items-center">
+                    <div className="womanPhotoWrapper d-flex justify-content-center align-items-center animate-on-scroll">
                         <div>
                             <img src={womanPhoto} className="manPhoto" />
                             <div className="gif1Woman">

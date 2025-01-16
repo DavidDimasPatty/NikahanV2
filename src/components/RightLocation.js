@@ -8,7 +8,7 @@ import littleDoll from "../assets/gif/littletdoll.gif"
 const RightLocation = () => {
 
     return (
-        <div className="wrapperLocationRight d-flex justify-content-center align-items-center">
+        <div  className="wrapperLocationRight d-flex justify-content-center align-items-center">
             <div className="littleDoll">
                 <img src={littleDoll} className="littleDollImg" />
             </div>
@@ -18,7 +18,7 @@ const RightLocation = () => {
             <div className="gifLove22">
                 <img src={gifLove2} className="gifLove22Img" />
             </div>
-            <div className="locationRight">
+            <div className="locationRight animate-on-scroll">
                 <div>
                     <div className="leftFlower">
                         <img src={leftFlower} className="leftFlowerImg" />
