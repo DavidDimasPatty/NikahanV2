@@ -9,9 +9,9 @@ const RightLocation = () => {
 
     return (
         <div  className="wrapperLocationRight d-flex justify-content-center align-items-center">
-            <div className="littleDoll">
+            {/* <div className="littleDoll">
                 <img src={littleDoll} className="littleDollImg" />
-            </div>
+            </div> */}
             <div className="gifLove2">
                 <img src={gifLove2} className="gifLove2Img" />
             </div>

@@ -18,7 +18,7 @@ const RightFooter = () => {
                         <img src={instagram} className="logoIg" />
                     </div>
                     <div className="text-center mt-3 backSound">
-                        Backsound By:
+                        BACKSOUND BY:
                     </div>
                     <div className="text-center soundTittle">
                         ANDMESH - ANUGERAH TERINDAH
