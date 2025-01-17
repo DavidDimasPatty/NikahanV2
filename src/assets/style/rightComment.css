@@ -3,6 +3,18 @@
     margin: 0;
     background: whitesmoke;
     font-family: BrandonGrotesque;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .wishbox-bunga1 {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        width: 150px; /* Sesuaikan ukuran gambar */
+        height: auto;
+        z-index: 10;
+    }
 
     .wrapperCommentRight {
         width: 100%;

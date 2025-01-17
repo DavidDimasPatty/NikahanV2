@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { formatDistanceToNow, parseISO } from "date-fns";
 import "../assets/style/rightComment.css";
+import bunga1 from "../assets/image/wishbox-bunga1.png"
 
 const RightComment = ({ guest }) => {
     const nama = guest || "Tamu Undangan";
@@ -27,11 +28,14 @@ const RightComment = ({ guest }) => {
     const totalPages = Math.ceil(comments.length / itemsPerPage);
 
     const renderPagination = () => {
+        if (currentData <= 1) {
+            return null;
+        }
+
         const maxPagesToShow = 3; // Atur jumlah halaman yang ingin ditampilkan
         let startPage = Math.max(currentPage - Math.floor(maxPagesToShow / 2), 1);
         let endPage = startPage + maxPagesToShow - 1;
 
-        // Pastikan endPage tidak melebihi total halaman
         if (endPage > totalPages) {
             endPage = totalPages;
             startPage = Math.max(endPage - maxPagesToShow + 1, 1);
@@ -41,7 +45,7 @@ const RightComment = ({ guest }) => {
             <div className="comments-pagination">
                 <button
                     onClick={() => goToPage(currentPage - 1)}
-                    disabled={currentPage === 1} // Disable tombol Prev jika halaman pertama aktif
+                    disabled={currentPage === 1}
                 >
                     ← Previous
                 </button>
@@ -59,7 +63,7 @@ const RightComment = ({ guest }) => {
                 })}
                 <button
                     onClick={() => goToPage(currentPage + 1)}
-                    disabled={currentPage === totalPages} // Disable tombol Next jika halaman terakhir aktif
+                    disabled={currentPage === totalPages}
                 >
                     Next →
                 </button>
@@ -136,6 +140,7 @@ const RightComment = ({ guest }) => {
 
     return (
         <div className="wrapperCommentRightInduk">
+            {/* <img src={bunga1} alt="Bunga" className="wishbox-bunga1" /> */}
             <div className="wrapperCommentRight">
                 <form onSubmit={handleSubmit} className="commentForm">
                     <div className="titleCommentForm">Wish Box</div>
@@ -202,13 +207,6 @@ const RightComment = ({ guest }) => {
                             </ul>
                         )}
                         {renderPagination()}
-                        {/* <div className="comments-pagination">
-                            <a href="#prev">← Previous</a>
-                            <a href="#1">1</a>
-                            <a href="#2">2</a>
-                            <a href="#3">3</a>
-                            <a href="#next">Next →</a>
-                        </div> */}
                     </div>
                 </div>
             </div>
