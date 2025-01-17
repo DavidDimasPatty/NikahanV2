@@ -71,7 +71,7 @@ const RightCouple = () => {
                     </div>
 
                     <div className="descManRight mt-4 d-flex justify-content-center align-items-center">
-                        Fendy Santoso
+                        <div className="text-center"> Fendy Santoso </div> 
                     </div>
 
                     <div className="parentManRightWrapper d-flex justify-content-center align-items-center">
@@ -109,7 +109,7 @@ const RightCouple = () => {
                     </div>
 
                     <div className="descWomanRight mt-4 d-flex justify-content-center align-items-center">
-                        Bumi Ayu
+                    <div className="text-center">  Bumi Ayu </div> 
                     </div>
 
                     <div className="parentWomanRightWrapper d-flex justify-content-center align-items-center">

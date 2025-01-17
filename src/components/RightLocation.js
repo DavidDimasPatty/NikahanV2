@@ -20,16 +20,13 @@ const RightLocation = () => {
       const googleMapsLinkWedding = `https://www.google.com/maps?q=JAGAT OFFICE BUILDING (JOB)`;
     return (
         <div  className="wrapperLocationRight d-flex justify-content-center align-items-center">
-            {/* <div className="littleDoll">
-                <img src={littleDoll} className="littleDollImg" />
-            </div> */}
-            <div className="gifLove2">
+              <div className="gifLove2">
                 <img src={gifLove2} className="gifLove2Img" />
             </div>
             <div className="gifLove22">
                 <img src={gifLove2} className="gifLove22Img" />
             </div>
-            <div className="locationRight animate-on-scroll">
+            <div className="locationRight animate-on-scroll ">
                 <div>
                     <div className="leftFlower">
                         <img src={leftFlower} className="leftFlowerImg" />
@@ -72,7 +69,7 @@ const RightLocation = () => {
                                         <br />
                                         Jl. Tomang Raya No. 28, Jakarta Barat
                                     </div>
-                                    <div className="buttonResepsiWrapper d-flex justify-content-end align-items-center">
+                                    <div className="buttonResepsiWrapper d-flex justify-content-end align-items-start">
                                         <button className="buttonResepsi"  onClick={() => window.open(googleMapsLinkWedding, '_blank')}> <i className="bi bi-geo-fill me-2" />Lokasi</button>
                                     </div>
                                 </div>
