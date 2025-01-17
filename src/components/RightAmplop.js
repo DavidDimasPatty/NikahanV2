@@ -3,7 +3,19 @@ import "../assets/style/rightAmplop.css"
 import logoBCA from "../assets/image/logoBCA.png"
 
 const RightAmplop = () => {
+    const [copied, setCopied] = useState(false);
 
+    const handleCopy = () => {
+        const textToCopy = "57704125789";
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+            })
+            .catch((err) => {
+                console.error("Gagal menyalin ke clipboard:", err);
+            });
+    };
     return (
         <div className="wrapperAmplopAll d-flex justify-content-center align-items-center">
             <div className="amplopAll">
@@ -30,8 +42,12 @@ const RightAmplop = () => {
 
 
                     <div className="wrapperCopyNoBankButton d-flex justify-content-center align-items-center">
-                        <button className="copyNoBankButton"><i className="bi bi-clipboard-fill me-2 text-dark" />Copy No. Rekening</button>
+                        <button className="copyNoBankButton" onClick={handleCopy}><i className="bi bi-clipboard-fill me-2 text-dark" />Copy No. Rekening</button>
                     </div>
+
+                    <center className={`bankCopy ${copied?`copied`:``}`}>
+                            <p style={{ color: 'white', marginTop: '10px' }}>Nomor Rekening Berhasil Disalin!</p>
+                     </center>
                 </div>
             </div>
         </div>

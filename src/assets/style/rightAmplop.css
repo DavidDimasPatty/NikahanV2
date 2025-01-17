@@ -107,3 +107,18 @@
         left: 200px;
     }
 }
+
+
+.bankCopy {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.bankCopy.copied {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.bankCopy p{
+    font-size: 18px;
+}
