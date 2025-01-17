@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { formatDistanceToNow, parseISO } from "date-fns";
 import "../assets/style/rightComment.css";
@@ -12,6 +12,7 @@ const RightComment = ({ guest }) => {
     const [pesan, setPesan] = useState("");
     const [tipePesan, setTipePesan] = useState(""); // "success" atau "error"
     const [isVisible, setIsVisible] = useState(false);
+    const timeoutRef = useRef(null);
 
     // Pagination
     const [currentPage, setCurrentPage] = useState(1);
@@ -80,11 +81,17 @@ const RightComment = ({ guest }) => {
             setTipePesan("error");
             setIsVisible(true);
 
-            // Mulai proses fade out setelah 5 detik
-            setTimeout(() => {
+            // Hapus timeout sebelumnya jika ada
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+
+            // Mulai proses fade out setelah 3 detik
+            timeoutRef.current = setTimeout(() => {
                 setIsVisible(false);
                 setTimeout(() => setPesan(""), 500);
             }, 3000);
+
             return;
         }
 
@@ -117,10 +124,15 @@ const RightComment = ({ guest }) => {
             // console.error("Error saat mengirim data:", error);
         }
 
-        // Mulai proses fade out setelah 5 detik
-        setTimeout(() => {
-            setIsVisible(false); // Mulai animasi fade out
-            setTimeout(() => setPesan(""), 500); // Hapus pesan setelah animasi selesai
+        // Hapus timeout sebelumnya jika ada
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+
+        // Mulai proses fade out setelah 3 detik
+        timeoutRef.current = setTimeout(() => {
+            setIsVisible(false);
+            setTimeout(() => setPesan(""), 500);
         }, 3000);
     };
 
@@ -142,7 +154,7 @@ const RightComment = ({ guest }) => {
         <div className="wrapperCommentRightInduk">
             {/* <img src={bunga1} alt="Bunga" className="wishbox-bunga1" /> */}
             <div className="wrapperCommentRight">
-                <form onSubmit={handleSubmit} className="commentForm">
+                <form onSubmit={handleSubmit} className="commentForm animate-on-scroll">
                     <div className="titleCommentForm">Wish Box</div>
                     <div className="d-flex justify-content-center">
                         <textarea
@@ -166,17 +178,19 @@ const RightComment = ({ guest }) => {
                     <div className="d-flex justify-content-center">
                         <button type="submit">Kirim</button>
                     </div>
-                    {pesan && (
-                        <div
-                            className={`alert-box ${tipePesan} ${!isVisible ? "hidden" : ""
-                                }`}
-                        >
-                            {pesan}
-                        </div>
-                    )}
+                    {/* {pesan && (
+                        
+                    )} */}
+
+                    <div
+                        className={`alert-box ${tipePesan} ${!isVisible ? "hidden" : ""
+                            }`}
+                    >
+                        {pesan}
+                    </div>
                 </form>
 
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center animate-on-scroll">
                     <div className="comments-container">
                         <div className="comments-header">
                             <h4>{comments.length} Ucapan</h4>
