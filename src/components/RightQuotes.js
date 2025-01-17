@@ -5,7 +5,7 @@ const RightQuotes = () => {
 
     return (
         <div className="wrapperQuotesRight">
-            <div className="contentQuotesRight">
+            <div className="contentQuotesRight animate-on-scroll">
                 <div className="quotesRight">
                     “Cinta tidak hanya tentang saling memandang,
                     tetapi melihat bersama ke arah yang sama.”

@@ -11,7 +11,8 @@
     width: 100%;
     height: 100%;
     padding-bottom: 50px;
-    border:  2px solid rgb(247, 137, 155);
+    border: 2px solid rgb(247, 137, 155);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 3);
 }
 
 .titleCoupleRight {
@@ -21,14 +22,13 @@
     font-size: 30px;
     font-family: BrandonGrotesque;
     font-weight: bold;
-    color:  rgb(247, 137, 155);
+    color: rgb(247, 137, 155);
     margin-top: 30px;
 }
 
 .manRight {
     width: 100%;
     height: 40%;
-    margin-top: 30px;
     overflow: hidden;
 }
 
@@ -43,9 +43,11 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 2);
     transition: box-shadow 0.3s ease-in-out;
     border: 3px solid pink;
+    z-index: 20;
+    position: relative;
 }
 
-.manPhoto:hover  {
+.manPhoto:hover {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 3);
 }
 
@@ -78,9 +80,10 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 2);
     transition: box-shadow 0.3s ease-in-out;
     border: 3px solid pink;
+    z-index: 10;
 }
 
-.manPhoto:hover  {
+.manPhoto:hover {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 3);
 }
 
@@ -105,6 +108,7 @@
 }
 
 .textGroom {
+    margin-top: 100px;
     font-family: QaskinBlack;
     font-size: 40px;
     letter-spacing: 2px;
@@ -134,12 +138,169 @@
     text-transform: uppercase;
 }
 
-.coupleRing{
+.coupleRing {
     width: 100px;
 }
 
-.leftBorder{
+.leftBorder {
     height: 10px;
     width: 100px;
     border-bottom: 2px solid black;
+}
+
+.leftBorderGroom {
+    height: 0px;
+    width: 250px;
+    border-bottom: 2px solid pink;
+}
+
+.gif1Man {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.gifLove1Man {
+    z-index: 1;
+    position: absolute;
+    top: -437px;
+    left: -90px;
+}
+
+.gif3Man {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.gifLove3Man {
+    z-index: 21;
+    position: absolute;
+    top: -140px;
+    left: 15px;
+    width: 240px;
+}
+
+.gif1Woman {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.gifLove1Woman {
+    z-index: 1;
+    position: absolute;
+    top: -437px;
+    left: -90px;
+    transform: scaleX(-1);
+}
+
+.gif3Woman {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.gifLove3Woman {
+    z-index: 21;
+    position: absolute;
+    top: -140px;
+    left: 10px;
+    width: 240px;
+}
+
+.pinkRibbon {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.pinkRibbonImg {
+    width: calc(80% + 210px);
+    height: auto;
+    position: absolute;
+    top: -80px;
+    left: 0px;
+    object-fit: cover;
+}
+
+
+.balon1 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.balon1Img {
+    z-index: 2;
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    width: 100px;
+}
+
+.balon11 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.balon11Img {
+    position: absolute;
+    top: -45px;
+    left: 30px;
+    width: 50px;
+}
+
+.balon3 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.balon3Img {
+    position: absolute;
+    top: 1320px;
+    left: -60px;
+    width: 250px;
+    transform: rotate(10deg);
+}
+
+
+.balon31 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.balon31Img {
+    position: absolute;
+    top: 1320px;
+    left: 550px;
+    width: 250px;
+    transform: scaleX(-1) rotate(20deg);
+}
+
+/* @media (max-width:1080px) {
+    .pinkRibbonImg {
+        width: 100vw;
+        top: -150px;
+        left: 0px;
+    }
+    
+} */
+
+@media (max-width:1080px) {
+    .pinkRibbonImg {
+        width: 100%;
+        height: 120px;
+        top: 0px;
+    }
+ 
+    .balon3{
+        visibility: hidden;
+    }
+    .balon31{
+        visibility: hidden;
+    }
 }

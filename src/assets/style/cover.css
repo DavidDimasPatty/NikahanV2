@@ -6,6 +6,12 @@
 }
 
 @font-face {
+    font-family: 'QaskinBlackSambung';
+    src: url('../font/QaskinBlack_PersonalUse.ttf') format('truetype');
+}
+
+
+@font-face {
     font-family: 'BrandonGrotesque';
     src: url('../font/HvDTrial_Brandon_Grotesque_black_italic.otf') format('otf');
     font-weight: 400;
@@ -19,7 +25,7 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    background: url("../image/coverImage.jpg");
+    background: url("../image/coverImage.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
     transition: top 0.5s ease;

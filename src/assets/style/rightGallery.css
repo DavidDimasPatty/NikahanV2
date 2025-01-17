@@ -1,6 +1,6 @@
 .wrapperRightGalleryAll {
     position: relative;
-    height: 450px;
+    /* height: 450px; */
     width: 100%;
 }
 
@@ -34,7 +34,7 @@
 .bridgeGallery {
     z-index: 2;
     background-color: rgb(224, 204, 215);
-    border-radius: 20%;
+    border-radius: 20px;
     width: 100%;
     height: 100px;
     top: -20px;
@@ -43,4 +43,12 @@
 
 .rightGalleryAll .carousel-root .carousel-slider {
     height: 500px !important;
+}
+
+.carousel-root {
+    background-color: whitesmoke !important;
+}
+
+.thumbs-wrapper.axis-vertical{
+    margin: 0 !important;
 }
