@@ -2,7 +2,8 @@ import React from "react";
 import "../assets/style/cover.css"
 import namaMan from "../assets/image/namaMan.png"
 import namaWoman from "../assets/image/namaWoman.png"
-const Cover = ({ onDone, frontWelcome,guest }) => {
+import coverImage from "../assets/image/coverImage.jpg"
+const Cover = ({ onDone, frontWelcome, guest }) => {
 
     const handleClick = () => {
         onDone();
@@ -10,6 +11,9 @@ const Cover = ({ onDone, frontWelcome,guest }) => {
 
     return (
         <div className={`coverAll${frontWelcome ? " " : " done"} d-flex justify-content-center align-items-center`}>
+            <div className="coverImage">
+                <img src={coverImage} className="coverImageImg" />
+            </div>
             <div className="coverWrapper">
                 <div className="coverTop d-flex justify-content-center">
                     THE WEDDING OF
@@ -17,13 +21,13 @@ const Cover = ({ onDone, frontWelcome,guest }) => {
                 <div className="coverMid d-flex justify-content-center">
                     <div>
                         <div className="nameManCoverMid">
-                            <img src={namaMan} className="nameManCover"/>
+                            <img src={namaMan} className="nameManCover" />
                         </div>
                         <div className="bridgeCoverMid">
                             &
                         </div>
                         <div className="nameWomanCoverMid">
-                            <img src={namaWoman} className="nameFemaleCover"/>
+                            <img src={namaWoman} className="nameFemaleCover" />
                         </div>
                     </div>
                 </div>
@@ -31,7 +35,7 @@ const Cover = ({ onDone, frontWelcome,guest }) => {
                     SPECIAL INVITATION TO
                 </div>
                 <div className="coverGuest d-flex justify-content-center">
-                   {guest}
+                    {guest}
                 </div>
                 <div className="coverButton d-flex justify-content-center">
                     <button className="buttonInvitation" onClick={handleClick}><i className="bi bi-envelope-open me-1"></i> Open Invitation</button>

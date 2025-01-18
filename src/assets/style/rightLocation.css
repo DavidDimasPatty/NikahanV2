@@ -144,7 +144,7 @@
 }
 
 .titlePemberkatan {
-    width: 70%;
+    width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-family: BrandonGrotesque2;
@@ -211,6 +211,7 @@
 
 
 @media (max-width: 1068px) {
+
     .customCardRight {
         width: 100vw;
         min-height: 610px;
@@ -234,5 +235,9 @@
 
     .wrapperLocationRight {
         background-position: start;
+    }
+
+    .titlePemberkatan {
+        width: 75%;
     }
 }

@@ -37,10 +37,26 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    background: url("../image/coverImage.jpg") center center;
+    /* background-image: url("../image/coverImage.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat; */
     transition: top 0.5s ease;
+    overflow: hidden;
+}
+
+.coverImage {
+    z-index: 998 !important;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.coverImageImg {
+    width:100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .buttonInvitation {
@@ -49,7 +65,6 @@
     background: #a8742c;
     color: white;
     width: 300px;
-    height: 100%;
     padding: 8px;
 }
 
@@ -59,6 +74,7 @@
     row-gap: 10px;
     color: white;
     font-weight: 700px;
+    z-index: 999;
 }
 
 .coverAll.done {
@@ -104,6 +120,17 @@
 .bridgeCoverMid {
     color: #a8742c;
     text-align: center;
-    font-family: QaskinBlack;
+    font-family: QaskinBlackSambung;
     font-size: 70px;
+}
+
+
+@media (max-width: 1068px) {
+    .coverImageImg {
+        width:200vw;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        left: -80%;
+    }
 }
