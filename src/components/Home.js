@@ -65,9 +65,23 @@ const Home = () => {
     };
 
     useEffect(() => {
+        const leftContent = document.querySelector(".leftContent");
+        const rightContent = document.querySelector(".rightContent");
         const scrollContainer = scrollContainerRef.current;
         if (scrollContainer) {
             scrollContainer.addEventListener('scroll', handleScroll);
+        }
+
+        const handleLeftScroll = (event) => {
+            event.preventDefault();
+            if (rightContent) {
+                const deltaY = event.deltaY;
+                rightContent.scrollTop += deltaY;
+            }
+        };
+
+        if (leftContent) {
+            leftContent.addEventListener("wheel", handleLeftScroll);
         }
 
         const elements = document.querySelectorAll(".animate-on-scroll");
@@ -90,12 +104,17 @@ const Home = () => {
         });
 
         return () => {
+
             if (scrollContainer) {
                 scrollContainer.removeEventListener('scroll', handleScroll);
             }
             elements.forEach((element) => {
                 observer.unobserve(element);
             });
+
+            if (leftContent) {
+                leftContent.removeEventListener("wheel", handleLeftScroll);
+            }
         };
 
     }, []);
@@ -171,14 +190,14 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="rightContent" ref={scrollContainerRef} >
-                    <RightWelcome  />
-                    <RightQuotes  />
-                    <RightCouple  />
-                    <RightLocation  />
-                    <RightAmplop  />
-                    <RightGallery  />
-                    <RightComment  />
-                    <RightFooter  />
+                    <RightWelcome />
+                    <RightQuotes />
+                    <RightCouple />
+                    <RightLocation />
+                    <RightAmplop />
+                    <RightGallery />
+                    <RightComment guest={segment[0]}/>
+                    <RightFooter />
                 </div>
             </div>
         </div>
