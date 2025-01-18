@@ -113,8 +113,10 @@ const Home = () => {
             observer.observe(element);
         });
 
-        if (document.readyState == "complete") {
+        if (document.readyState === "complete") {
             toggleLoading();
+        } else {
+            window.addEventListener("load", toggleLoading);
         }
 
         return () => {
@@ -189,7 +191,7 @@ const Home = () => {
                                 <img src={leftImage5} />
                             </div> */}
                         <div className="imageCarrousel">
-                            <img src={leftImage6} />
+                            <img src={leftImage6} className="imageCarrouselImg" />
                         </div>
                         {/* <div className="imageCarrousel">
                                 <img src={leftImage7} />
