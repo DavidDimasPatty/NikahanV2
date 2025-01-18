@@ -54,7 +54,8 @@
 
 .commentForm select {
     width: 80%;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 15px 20px 15px 20px;
     margin-bottom: 10px;
     border: 1px solid rgb(202, 87, 135);
     border-radius: 15px;
@@ -76,7 +77,7 @@
 .commentForm button {
     display: block;
     width: 80%;
-    padding: 10px 15px;
+    padding: 15px 20px 15px 20px;
     background-color: rgb(202, 87, 135);
     color: #fff;
     font-size: 14px;
