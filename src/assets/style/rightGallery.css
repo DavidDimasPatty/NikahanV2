@@ -2,64 +2,47 @@
     position: relative;
     /* height: 450px; */
     width: 100%;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 .rightGalleryAll {
     height: 100%;
     width: 100%;
-    pointer-events: auto; 
+    pointer-events: auto;
 }
 
 .imageCarrouselRight {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center; /* Untuk memastikan gambar terpusat jika perlu */
+    align-items: center; /* Agar gambar terpusat secara vertikal */
 }
 
 .imageCarrouselRight img {
-    width: 500px;
-    height: 1000px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.tittleGallery {
-    position: absolute;
-    text-align: center;
-    z-index: 3;
-    text-align: center;
-    color: black;
-    width: 100%;
-    top: 20px;
-}
-
-.bridgeGallery {
-    z-index: 2;
-    background-color: rgb(224, 204, 215);
-    border-radius: 20px;
-    width: 100%;
-    height: 100px;
-    top: -20px;
-    position: absolute;
-}
-
-.rightGalleryAll .carousel-root .carousel-slider {
-    height: 500px !important;
-}
+/* .rightGalleryAll .carousel-root .carousel-slider {
+    height: 900px !important;
+} */
 
 .carousel-root {
     background-color: whitesmoke !important;
 }
 
-.thumbs-wrapper.axis-vertical{
+.thumbs-wrapper.axis-vertical {
     margin: 0 !important;
 }
 
-.crousel-item{
-    opacity:0;
+/* .crousel-item {
+    opacity: 0;
     transition: opacity 1s !important;
-  }
-  .carousel-item.active{
-    opacity:1;
+}
+
+.carousel-item.active {
+    opacity: 1;
     transition: opacity 1s !important;
-  }
+} */
