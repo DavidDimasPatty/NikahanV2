@@ -170,7 +170,7 @@ const RightComment = ({ guest }) => {
                             onChange={(e) => setKehadiran(e.target.value)}
                             required
                         >
-                            <option value="Pilih">== Pilih Kehadiran ==</option>
+                            <option value="Pilih" disabled>Pilih Kehadiran</option>
                             <option value="Hadir">Hadir</option>
                             <option value="Tidak Hadir">Tidak Hadir</option>
                         </select>
