@@ -18,6 +18,18 @@
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'BrandonGrotesque2';
+    src: url('../font/Brandon_reg.otf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'BrandonGrotesqueBold';
+    src: url('../font/Brandon_bld.otf') format('truetype');
+}
+
 .coverAll {
     position: absolute;
     background: white;

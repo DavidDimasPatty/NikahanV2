@@ -152,7 +152,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <Carousel
+                        {/* <Carousel
                             showArrows={false}
                             showIndicators={false}
                             showStatus={false}
@@ -161,23 +161,23 @@ const Home = () => {
                             interval={3000}
                             infiniteLoop={true}
                             showThumbs={false}
-                        >
-                            <div className="imageCarrousel">
+                        > */}
+                             {/* <div className="imageCarrousel">
                                 <img src={leftImage2} />
-                            </div>
-                            <div className="imageCarrousel">
+                            </div> 
+                             <div className="imageCarrousel">
                                 <img src={leftImage3} />
-                            </div>
-                            <div className="imageCarrousel">
+                            </div> *
+                             <div className="imageCarrousel">
                                 <img src={leftImage4} />
                             </div>
                             <div className="imageCarrousel">
                                 <img src={leftImage5} />
-                            </div>
+                            </div> */}
                             <div className="imageCarrousel">
                                 <img src={leftImage6} />
                             </div>
-                            <div className="imageCarrousel">
+                            {/* <div className="imageCarrousel">
                                 <img src={leftImage7} />
                             </div>
                             <div className="imageCarrousel">
@@ -185,8 +185,8 @@ const Home = () => {
                             </div>
                             <div className="imageCarrousel">
                                 <img src={leftImage9} />
-                            </div>
-                        </Carousel>
+                            </div>  */}
+                        {/* </Carousel> */}
                     </div>
                 </div>
                 <div className="rightContent" ref={scrollContainerRef} >

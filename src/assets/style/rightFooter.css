@@ -24,34 +24,34 @@
 }
 
 .madeWith{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: BrandonGrotesqueBold;
     font-weight: bolder;
-    color: white;
+    color: #541214 ;
     font-size: 25px;
-    -webkit-text-stroke: 0.4px black;
+    
 }
 
 .companyUs{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: BrandonGrotesqueBold;
     font-weight: bolder;
-    color: white;
+    color: #541214 ;
     font-size: 25px;
-    -webkit-text-stroke: 0.4px black;
+    
 }
 
 .backSound{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: BrandonGrotesqueBold;
     font-weight: bolder;
-    color: white;
+    color: #541214 ;
     font-size: 20px;
-    -webkit-text-stroke: 0.4px black;
+    
 
 }
 
 .soundTittle{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: BrandonGrotesqueBold;
     font-weight: bold;
-    color: white;
+    color: #541214 ;
     font-size:20px;
-    -webkit-text-stroke: 0.3px black;
+    
 }

@@ -11,6 +11,7 @@ import leftImage9 from "../assets/image/leftImage9.jpg"
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const RightGallery = () => {
+    
     return (
         <div className="wrapperRightGalleryAll">
             <div className="rightGalleryAll">
@@ -23,6 +24,7 @@ const RightGallery = () => {
                     interval={3000}
                     infiniteLoop={true}
                     showThumbs={true}
+                    fade={true}
                 >
                     <div className="imageCarrouselRight">
                         <img src={leftImage2} />

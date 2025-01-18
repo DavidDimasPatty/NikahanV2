@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import leftImage2 from "../assets/image/leftImage2.jpg"
+import leftImage2 from "../assets/image/rightWelcome2.jpg"
 import "../assets/style/rightWelcome.css"
 const RightWelcome = () => {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -33,49 +33,56 @@ const RightWelcome = () => {
                 <img src={leftImage2} className="welcomeRightImg" />
             </div>
             <div className="wrapperTextWelcomeRight">
-
-                <div className="textWelcomeRight">
-                    <div className="rightWelcomeTop">
-                        <svg width="300" height="100" viewBox="0 0 200 100">
-                            <path id="curve" d="M 10 100 Q 100 -10 250 100" fill="transparent" />
+                <div>
+                    <div className="textWelcomeRight">
+                        {/* <div className="rightWelcomeTop">
+                             <svg width="300" height="100" viewBox="0 0 200 100">
+                            <path id="curve" d="M 10 100 Q 100 30 250 100" fill="transparent" />
                             <text>
                                 <textPath href="#curve" startOffset="50%" text-anchor="middle" class="stroked-text">
-                                    Our Weeding
-                                </textPath>
-                            </text>
-                        </svg>
+                                    Our Weeding 
+                             </textPath> 
+                             </text>
+                        </svg> 
+                            Our Weeding
+                        </div> */}
+                        <div className="rightWelcomeMid">
+                            Efendy Santoso
+                            <br />
+                            &
+                            <br />
+                            Bumi Ayu
+                        </div>
+                        <div className="rightWelcomeBottom">
+                            2 Febuari 2024
+                        </div>
                     </div>
-                    <div className="rightWelcomeMid">
-                        Fendy Santoso & Bumi Ayu
-                    </div>
-                    <div className="rightWelcomeBottom">
-                        2 Febuari 2024
-                    </div>
-                </div>
-            </div>
-            <div className="countdownRight">
-                <div className="time-box">
-                    <div>
-                        <span>{timeLeft.days}</span>
-                        <div>Hari</div>
-                    </div>
-                </div>
-                <div className="time-box">
-                    <div>
-                        <span>{timeLeft.hours}</span>
-                        <div>Jam</div>
-                    </div>
-                </div>
-                <div className="time-box">
-                    <div>
-                        <span>{timeLeft.minutes}</span>
-                        <div>Menit</div>
-                    </div>
-                </div>
-                <div className="time-box">
-                    <div>
-                        <span>{timeLeft.seconds}</span>
-                        <div>Detik</div>
+
+                    <div className="countdownRight">
+                        <div className="time-box">
+                            <div>
+                                <span>{timeLeft.days}</span>
+                                <div>Hari</div>
+                            </div>
+                        </div>
+                        <div className="time-box">
+                            <div>
+                                <span>{timeLeft.hours}</span>
+                                <div>Jam</div>
+                            </div>
+                        </div>
+                        <div className="time-box">
+                            <div>
+                                <span>{timeLeft.minutes}</span>
+                                <div>Menit</div>
+                            </div>
+                        </div>
+                        <div className="time-box">
+                            <div>
+                                <span>{timeLeft.seconds}</span>
+                                <div>Detik</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

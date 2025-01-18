@@ -33,7 +33,7 @@
     height: 100%;
     background: url("../image/leftImage5.jpg");
     background-size: cover;
-    filter: blur(2px) opacity(0.9);
+    filter: blur(2px) opacity(0.9) brightness(0.4);
     z-index: 1;
     border-radius: 20px;
 }
@@ -44,7 +44,6 @@
 }
 
 .pemberkatanRight {
-    color: black;
     width: 100%;
     position: relative;
     display: flex;
@@ -71,7 +70,11 @@
     background-color: white;
     border-radius: 20px;
     border: 2px solid pink;
-    color: pink;
+    color: #541214;
+}
+
+.buttonPemberkatan i{
+    color: #541214 !important; 
 }
 
 .resepsiRight {
@@ -103,8 +106,14 @@
     border: 2px solid pink;
     background-color: white;
     border-radius: 20px;
-    color: pink;
+    color: #541214;
 }
+
+
+.buttonResepsi i{
+    color: #541214 !important; 
+}
+
 
 .leftFlower {
     z-index: 20;
@@ -135,30 +144,32 @@
 }
 
 .titlePemberkatan {
-    width: 65%;
+    width: 70%;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-family: QaskinBlack;
+    font-family: BrandonGrotesque2;
     font-size: 20px;
     letter-spacing: 2px;
-    color: rgb(247, 137, 155);
+    color: pink;
 }
 
 .titleResepsi {
-    font-family: QaskinBlack;
+    font-family: BrandonGrotesque2;
     font-size: 20px;
     letter-spacing: 2px;
-    color: rgb(247, 137, 155);
+    color: pink;
+    font-family: BrandonGrotesque2;
     text-align: end;
 }
 
 .descPemberkatan {
-    width: 70%;
+    width: 80%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
-    color: rgb(247, 137, 155);
+    color: pink;
+    font-family: BrandonGrotesque2;
 }
 
 
@@ -167,7 +178,8 @@
     text-align: end;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
-    color: rgb(247, 137, 155);
+    color: pink;
+    font-family: BrandonGrotesque2;
 }
 
 
@@ -197,6 +209,7 @@
     transform: rotate(-15deg);
 }
 
+
 @media (max-width: 1068px) {
     .customCardRight {
         width: 100vw;
@@ -218,5 +231,8 @@
     .buttonResepsiWrapper {
         width: 96%;
     }
-    
+
+    .wrapperLocationRight {
+        background-position: start;
+    }
 }

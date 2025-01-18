@@ -15,9 +15,8 @@
     font-family: "QaskinBlackSambung";
     font-size: 60px;
     text-align: center;
-    color: pink;
+    color: #541214;
     font-weight: bolder;
-    -webkit-text-stroke: 0.5px black;
 
 }
 
@@ -30,9 +29,9 @@
 
 .amplopDesc b {
     width: 80%;
-    color: white;
-    -webkit-text-stroke: 0.5px black;
+    color: #541214;
     font-size: 20px;
+    font-family: BrandonGrotesque;
 }
 
 .amplopCard {

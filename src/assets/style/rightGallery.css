@@ -54,3 +54,12 @@
 .thumbs-wrapper.axis-vertical{
     margin: 0 !important;
 }
+
+.crousel-item{
+    opacity:0;
+    transition: opacity 1s !important;
+  }
+  .carousel-item.active{
+    opacity:1;
+    transition: opacity 1s !important;
+  }

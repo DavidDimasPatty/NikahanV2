@@ -34,21 +34,21 @@ const RightCouple = () => {
                     <img src={pinkRibbon} className="pinkRibbonImg" />
                 </div>
 
-                <div className="balon1">
+                {/* <div className="balon1">
                     <img src={balon1} className="balon1Img" />
                 </div>
 
                 <div className="balon11">
                     <img src={balon1} className="balon11Img" />
-                </div>
+                </div> */}
 
-                <div className="balon3">
+                {/* <div className="balon3">
                     <img src={balon3} className="balon3Img" />
                 </div>
 
                 <div className="balon31">
                     <img src={balon3} className="balon31Img" />
-                </div>
+                </div> */}
 
 
                 <div className="manRight">
@@ -71,13 +71,13 @@ const RightCouple = () => {
                     </div>
 
                     <div className="descManRight mt-4 d-flex justify-content-center align-items-center">
-                        <div className="text-center"> Fendy Santoso </div> 
+                        <div className="text-center"> Efendy Santoso </div>
                     </div>
 
                     <div className="parentManRightWrapper d-flex justify-content-center align-items-center">
                         <div className="parentManRight">
-                            <div>Anak Tercinta Dari</div>
-                            <div>Mr. Fam Djan Lim (✟) & Mrs. Bong Djan Lie</div>
+                            <div>Putra Bungsu Dari</div>
+                            <div className="parentMan">Mr. Fam Djan Lim (✟) & Mrs. Bong Djan Lie</div>
                         </div>
                     </div>
 
@@ -109,12 +109,12 @@ const RightCouple = () => {
                     </div>
 
                     <div className="descWomanRight mt-4 d-flex justify-content-center align-items-center">
-                    <div className="text-center">  Bumi Ayu </div> 
+                        <div className="text-center"> Bumi Ayu </div>
                     </div>
 
                     <div className="parentWomanRightWrapper d-flex justify-content-center align-items-center">
                         <div className="parentWomanRight">
-                            <div>Anak Tercinta Dari</div>
+                            <div>Putri Bungsu Dari</div>
                             <div>Mr. Fam Djan Lim (✟) & Mrs. Bong Djan Lie</div>
                         </div>
                     </div>
