@@ -1,285 +1,280 @@
 .wrapperCommentRightInduk {
-
     margin: 0;
     background: whitesmoke;
     font-family: BrandonGrotesque;
     position: relative;
     width: 100%;
     height: auto;
+}
 
-    .wishbox-bunga1 {
-        position: absolute;
-        top: 20px;
-        right: 40px;
-        width: 150px;
-        /* Sesuaikan ukuran gambar */
-        height: auto;
-        z-index: 10;
+.wishbox-bunga1 {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 150px;
+    height: auto;
+    z-index: 10;
+}
+
+.wrapperCommentRight {
+    width: 100%;
+    margin: 0;
+
+    padding: 20px;
+    background: rgb(224, 204, 215);
+    border-radius: 100px 100px 0px 0px;
+}
+
+.commentForm {
+    padding-bottom: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.commentForm .titleCommentForm {
+    font-family: "QaskinBlackSambung";
+    font-size: 60px;
+    text-align: center;
+    color: #541214;
+    font-weight: bolder;
+}
+
+.commentForm textarea {
+    width: 80%;
+    height: 80px;
+    padding: 15px 20px 15px 20px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(202, 87, 135);
+    border-radius: 20px;
+    font-size: 14px;
+    resize: none;
+    background-color: whitesmoke;
+    color: #4b4b4b;
+}
+
+.commentForm select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(202, 87, 135);
+    border-radius: 15px;
+    font-size: 14px;
+    background-color: whitesmoke;
+    color: #4b4b4b;
+}
+
+.commentForm textarea:focus {
+    border: 2px solid rgb(202, 87, 135);
+    outline: none;
+}
+
+.commentForm select:focus {
+    border: 2px solid rgb(202, 87, 135);
+    outline: none;
+}
+
+.commentForm button {
+    display: block;
+    width: 80%;
+    padding: 10px 15px;
+    background-color: rgb(202, 87, 135);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.commentForm button:hover {
+    background-color: rgb(184, 44, 102);
+    color: white;
+}
+
+.commentForm button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.alert-box {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px auto;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alert-box.success {
+    background-color: inherit;
+    color: green;
+}
+
+.alert-box.error {
+    background-color: inherit;
+    color: red;
+}
+
+.alert-box.hidden {
+    opacity: 0;
+}
+
+.alert-box {
+    animation: fadeInComment 0.5s ease-in-out;
+}
+
+.comments-container {
+    color: #4b4b4b;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 80%;
+}
+
+.comments-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments-closed-message {
+    font-size: 14px;
+    color: white;
+    background-color: rgb(251, 159, 174);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.comments-list::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 10px;
+}
+
+.comments-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border: 2px solid rgba(201, 104, 157, 0.3);
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.comment-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: whitesmoke;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-name {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.comment-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comment-kehadiran {
+    font-size: 12px;
+    color: #999;
+    font-weight: bold;
+}
+
+.comments-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.comments-pagination button {
+    text-decoration: none;
+    color: rgb(251, 159, 174);
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.comments-pagination button:hover {
+    background-color: rgb(251, 159, 174);
+    color: white;
+}
+
+.comments-pagination button.active {
+    background-color: rgb(251, 159, 174);
+    color: white;
+    border: none;
+    cursor: default;
+}
+
+.comments-pagination button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .commentForm textarea {
+        width: 100%;
+        height: 80px;
+    }
+    .commentForm select {
+        width: 100%;
+    }
+    .commentForm button {
+        width: 100%;
+    }
+    .comments-container {
+        width: 100%;
     }
 
-    .wrapperCommentRight {
-        width: 100%;
-        margin: 0;
-
-        padding: 20px;
-        background: rgb(224, 204, 215);
-        border-radius: 100px 100px 0px 0px;
-
-        .commentForm {
-            padding-bottom: 50px;
-            width: 100%;
-            position: relative;
-        }
-
-        .commentForm .titleCommentForm {
-            font-family: "QaskinBlackSambung";
-            font-size: 60px;
-            text-align: center;
-            color: pink;
-            font-weight: bolder;
-            -webkit-text-stroke: 0.5px black;
-        }
-
-        .commentForm textarea {
-            width: 80%;
-            height: 80px;
-            padding: 15px 20px 15px 20px;
-            margin-bottom: 5px;
-            border: 1px solid rgb(202, 87, 135);
-            border-radius: 20px;
-            font-size: 14px;
-            resize: none;
-            background-color: whitesmoke;
-            color: #4b4b4b;
-        }
-
-        .commentForm select {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid rgb(202, 87, 135);
-            border-radius: 15px;
-            font-size: 14px;
-            background-color: whitesmoke;
-            color: #4b4b4b;
-        }
-
-        .commentForm textarea:focus {
-            border: 2px solid rgb(202, 87, 135);
-            outline: none;
-        }
-
-        .commentForm select:focus {
-            border: 2px solid rgb(202, 87, 135);
-            outline: none;
-        }
-
-        .commentForm button {
-            display: block;
-            width: 80%;
-            padding: 10px 15px;
-            background-color: rgb(202, 87, 135);
-            color: #fff;
-            font-size: 14px;
-            font-weight: bold;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-        }
-
-        .commentForm button:hover {
-            background-color: rgb(184, 44, 102);
-            color: white;
-        }
-
-        .commentForm button:active {
-            transform: scale(0.98);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .alert-box {
-            padding: 10px 15px;
-            font-size: 14px;
-            font-weight: bold;
-            margin: 10px auto;
-            margin-top: 0;
-            width: 100%;
-            text-align: center;
-            transition: opacity 0.5s ease-in-out;
-            position: absolute;
-            top: 92%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .alert-box.success {
-            background-color: inherit;
-            color: green;
-        }
-
-        .alert-box.error {
-            background-color: inherit;
-            color: red;
-        }
-
-        .alert-box.hidden {
-            opacity: 0;
-            /* transform: translateY(-10px); */
-        }
-
-        .alert-box {
-            animation: fadeInComment 0.5s ease-in-out;
-        }
-
-        .comments-container {
-            color: #4b4b4b;
-            background-color: whitesmoke;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            width: 80%;
-        }
-
-        .comments-header {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .comments-closed-message {
-            font-size: 14px;
-            color: white;
-            background-color: rgb(251, 159, 174);
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        .comments-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            max-height: 500px;
-            overflow-y: scroll;
-        }
-
-        /* Gaya untuk scrollbar */
-        .comments-list::-webkit-scrollbar {
-            width: 12px;
-            border-radius: 10px;
-        }
-
-        .comments-list::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-        }
-
-        .comments-list::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            border: 2px solid rgba(201, 104, 157, 0.3);
-        }
-
-        .comments-list::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.8);
-        }
-
-        .comment-item {
-            display: flex;
-            align-items: flex-start;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .comment-icon {
-            font-size: 24px;
-            margin-right: 10px;
-            color: whitesmoke;
-        }
-
-        .comment-content {
-            flex: 1;
-        }
-
-        .comment-name {
-            font-weight: bold;
-            margin-bottom: 0;
-        }
-
-        .comment-time {
-            font-size: 12px;
-            color: #999;
-        }
-
-        .comment-text {
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .comment-kehadiran {
-            font-size: 12px;
-            color: #999;
-            font-weight: bold;
-        }
-
-        .comments-pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 10px;
-        }
-
-        .comments-pagination button {
-            text-decoration: none;
-            color: rgb(251, 159, 174);
-            font-size: 14px;
-            padding: 5px 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .comments-pagination button:hover {
-            background-color: rgb(251, 159, 174);
-            color: white;
-        }
-
-        .comments-pagination button.active {
-            background-color: rgb(251, 159, 174);
-            color: white;
-            border: none;
-            cursor: default;
-        }
-
-        .comments-pagination button[disabled] {
-            cursor: not-allowed;
-            opacity: 0.6;
-            pointer-events: none;
-        }
-
-        /* Responsif untuk layar kecil */
-        @media (max-width: 768px) {
-            .commentForm textarea {
-                width: 100%;
-                height: 80px;
-            }
-            .commentForm select {
-                width: 100%;
-            }
-            .commentForm button {
-                width: 100%;
-            }
-            .comments-container {
-                width: 100%;
-            }
-
-            .comments-list {
-                max-height: 300px;
-            }
-        }
+    .comments-list {
+        max-height: 300px;
     }
 }
 
