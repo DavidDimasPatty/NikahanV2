@@ -11,6 +11,11 @@ const Cover = ({ onDone, frontWelcome, guest }) => {
 
     return (
         <div className={`coverAll${frontWelcome ? " " : " done"} d-flex justify-content-center align-items-center`}>
+           <div className={`loadScreen d-flex justify-content-center align-items-center`}>
+                <div className="loadScreenContent">
+                        Please Wait.....
+                </div>
+           </div>
             <div className="coverImage">
                 <img src={coverImage} className="coverImageImg" />
             </div>

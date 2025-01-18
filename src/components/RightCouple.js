@@ -115,7 +115,7 @@ const RightCouple = () => {
                     <div className="parentWomanRightWrapper d-flex justify-content-center align-items-center">
                         <div className="parentWomanRight">
                             <div>Putri Bungsu Dari</div>
-                            <div>Mr. Fam Djan Lim (✟) & Mrs. Bong Djan Lie</div>
+                            <div>Mr. Sujono & Mrs. Lo Oi Tju</div>
                         </div>
                     </div>
                 </div>

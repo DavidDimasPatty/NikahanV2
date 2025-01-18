@@ -20,6 +20,7 @@
 }
 
 .logoIg {
+    filter: invert(20%) sepia(100%) saturate(350%) hue-rotate(-40deg);
     width: 30px;
 }
 

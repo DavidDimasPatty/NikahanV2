@@ -24,6 +24,7 @@ import backSound from "../assets/song/backSoundTemp.mp3"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Home = () => {
     const [frontWelcome, setFrontWelcome] = useState(true);
+    const [loadingScr, setloadingScr] = useState(false);
     const path = window.location.pathname;
     const segment = path.split('/').filter(Boolean);
     const [isDown, setIsDown] = useState(true);
@@ -34,6 +35,10 @@ const Home = () => {
     const toggleFront = () => {
         setFrontWelcome(!frontWelcome);
         playAudio();
+    }
+
+    const toggleLoading = () => {
+        setloadingScr(!loadingScr);
     }
 
     const togglePlay = () => {
@@ -103,6 +108,17 @@ const Home = () => {
             observer.observe(element);
         });
 
+        const hideLoadingScreen = () => {
+            const loadingScreen = document.querySelector(".loadScreen");
+            if (loadingScreen) {
+                loadingScreen.style.opacity = 0;
+            }
+        }
+
+        if (document.readyState == "complete") {
+            hideLoadingScreen();
+        }
+
         return () => {
 
             if (scrollContainer) {
@@ -115,6 +131,7 @@ const Home = () => {
             if (leftContent) {
                 leftContent.removeEventListener("wheel", handleLeftScroll);
             }
+            window.removeEventListener("load", hideLoadingScreen);
         };
 
     }, []);
@@ -162,7 +179,7 @@ const Home = () => {
                             infiniteLoop={true}
                             showThumbs={false}
                         > */}
-                             {/* <div className="imageCarrousel">
+                        {/* <div className="imageCarrousel">
                                 <img src={leftImage2} />
                             </div> 
                              <div className="imageCarrousel">
@@ -174,10 +191,10 @@ const Home = () => {
                             <div className="imageCarrousel">
                                 <img src={leftImage5} />
                             </div> */}
-                            <div className="imageCarrousel">
-                                <img src={leftImage6} />
-                            </div>
-                            {/* <div className="imageCarrousel">
+                        <div className="imageCarrousel">
+                            <img src={leftImage6} />
+                        </div>
+                        {/* <div className="imageCarrousel">
                                 <img src={leftImage7} />
                             </div>
                             <div className="imageCarrousel">
@@ -196,7 +213,7 @@ const Home = () => {
                     <RightLocation />
                     <RightAmplop />
                     <RightGallery />
-                    <RightComment guest={segment[0]}/>
+                    <RightComment guest={segment[0]} />
                     <RightFooter />
                 </div>
             </div>

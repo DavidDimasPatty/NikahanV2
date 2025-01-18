@@ -26,7 +26,7 @@ const RightFooter = () => {
                 </div>
             </div>
             <div className="footerRightFooter d-flex justify-content-center align-items-center right-reserved">
-                © all rights reserved by iKōdora.
+                <b>© all rights reserved by iKōdora.</b>
             </div>
         </div>
     );
