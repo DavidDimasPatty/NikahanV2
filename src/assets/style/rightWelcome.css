@@ -93,7 +93,6 @@
     font-family: QaskinBlackSambung;
     font-weight: bolder;
     color: pink;
-    -webkit-text-stroke: 0.4px black;
 }
 
 .stroked-text {
@@ -114,5 +113,5 @@
     font-family: BrandonGrotesque;
     font-weight: bolder;
     color: pink;
-    -webkit-text-stroke: 0.3px black;
+    /* -webkit-text-stroke: 0.3px black; */
 }

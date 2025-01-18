@@ -115,10 +115,11 @@
 }
 
 .textBride {
-    font-family: QaskinBlack;
+    font-family: BrandonGrotesqueBold;
     font-size: 40px;
     letter-spacing: 2px;
     color: rgb(247, 137, 155);
+    text-transform: uppercase;
 }
 
 .descManRight {
