@@ -1,10 +1,11 @@
 .wrapperCommentRightInduk {
     margin: 0;
     background: whitesmoke;
-    font-family: BrandonGrotesque;
+    font-family: 'BrandonGrotesque';
     position: relative;
     width: 100%;
     height: auto;
+    /* box-sizing: border-box; */
 }
 
 .wishbox-bunga1 {
@@ -32,7 +33,7 @@
 }
 
 .commentForm .titleCommentForm {
-    font-family: "QaskinBlackSambung";
+    font-family: 'QaskinBlackSambung';
     font-size: 60px;
     text-align: center;
     color: #541214;
@@ -53,6 +54,8 @@
 }
 
 .commentForm select {
+    -webkit-appearance: none;
+    appearance: none;
     width: 80%;
     /* padding: 10px; */
     padding: 15px 20px 15px 20px;
