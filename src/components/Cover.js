@@ -3,7 +3,7 @@ import "../assets/style/cover.css"
 import namaMan from "../assets/image/namaMan.png"
 import namaWoman from "../assets/image/namaWoman.png"
 import coverImage from "../assets/image/coverImage.jpg"
-const Cover = ({ onDone, frontWelcome, guest }) => {
+const Cover = ({ onDone, frontWelcome, guest,loadScreen }) => {
 
     const handleClick = () => {
         onDone();
@@ -11,7 +11,7 @@ const Cover = ({ onDone, frontWelcome, guest }) => {
 
     return (
         <div className={`coverAll${frontWelcome ? " " : " done"} d-flex justify-content-center align-items-center`}>
-           <div className={`loadScreen d-flex justify-content-center align-items-center`}>
+           <div className={`loadScreen ${loadScreen? " ": " done"} d-flex justify-content-center align-items-center`}>
                 <div className="loadScreenContent">
                         Please Wait.....
                 </div>

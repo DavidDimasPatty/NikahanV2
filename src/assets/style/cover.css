@@ -133,7 +133,7 @@
     z-index: 1000;
     display: none;
     pointer-events: none;
-    opacity: 0.9;
+    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
@@ -144,11 +144,12 @@
     font-size: 70px;
 }
 
-/* 
+
 .loadScreen.done{
     opacity: 0.9;
     transition: opacity 0.5s ease;
-} */
+    pointer-events: fill;
+}
 
 @media (max-width: 1068px) {
     .coverImageImg {

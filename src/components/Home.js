@@ -38,7 +38,7 @@ const Home = () => {
     }
 
     const toggleLoading = () => {
-        setloadingScr(!loadingScr);
+        setloadingScr(true);
     }
 
     const togglePlay = () => {
@@ -108,15 +108,8 @@ const Home = () => {
             observer.observe(element);
         });
 
-        const hideLoadingScreen = () => {
-            const loadingScreen = document.querySelector(".loadScreen");
-            if (loadingScreen) {
-                loadingScreen.style.opacity = 0;
-            }
-        }
-
         if (document.readyState == "complete") {
-            hideLoadingScreen();
+            toggleLoading();
         }
 
         return () => {
@@ -131,14 +124,13 @@ const Home = () => {
             if (leftContent) {
                 leftContent.removeEventListener("wheel", handleLeftScroll);
             }
-            window.removeEventListener("load", hideLoadingScreen);
-        };
+         };
 
     }, []);
 
     return (
         <div className="homeAll">
-            <Cover onDone={toggleFront} frontWelcome={frontWelcome} guest={segment} />
+            <Cover onDone={toggleFront} frontWelcome={frontWelcome} guest={segment} loadScreen={loadingScr}/>
             <Floating scroll={isDown} scrollContainerRef={scrollContainerRef} tooglePlay={togglePlay} isPlaying={isPlaying} />
             <div className="contentAll">
                 <audio ref={audioRef} src={backSound} preload="auto" autoPlay loop />
