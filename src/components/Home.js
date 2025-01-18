@@ -25,8 +25,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Home = () => {
     const [frontWelcome, setFrontWelcome] = useState(true);
     const [loadingScr, setloadingScr] = useState(false);
-    const path = window.location.pathname;
-    const segment = path.split('/').filter(Boolean);
+    const path = window.location.href;
+    var guestInvite = "";
+    const segment = path.split("/")[3];
+    segment.split("%20").forEach((item, index) => {
+        guestInvite = guestInvite + item + " ";
+    })
+
     const [isDown, setIsDown] = useState(true);
     const scrollContainerRef = useRef(null);
     const audioRef = useRef(null);
@@ -124,13 +129,13 @@ const Home = () => {
             if (leftContent) {
                 leftContent.removeEventListener("wheel", handleLeftScroll);
             }
-         };
+        };
 
     }, []);
 
     return (
         <div className="homeAll">
-            <Cover onDone={toggleFront} frontWelcome={frontWelcome} guest={segment} loadScreen={loadingScr}/>
+            <Cover onDone={toggleFront} frontWelcome={frontWelcome} guest={guestInvite} loadScreen={loadingScr} />
             <Floating scroll={isDown} scrollContainerRef={scrollContainerRef} tooglePlay={togglePlay} isPlaying={isPlaying} />
             <div className="contentAll">
                 <audio ref={audioRef} src={backSound} preload="auto" autoPlay loop />
@@ -156,7 +161,7 @@ const Home = () => {
                                         Kepada Yth. Bapak / Ibu /Saudara/i
                                     </div>
                                     <div className="leftBottomBottom">
-                                        {segment}
+                                        {guestInvite}
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +210,7 @@ const Home = () => {
                     <RightLocation />
                     <RightAmplop />
                     <RightGallery />
-                    <RightComment guest={segment[0]} />
+                    <RightComment guest={guestInvite} />
                     <RightFooter />
                 </div>
             </div>
