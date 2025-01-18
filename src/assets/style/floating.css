@@ -3,6 +3,7 @@
     right: 0;
     bottom: 20px;
     z-index: 200;
+    pointer-events: none; 
 }
 
 
@@ -22,6 +23,8 @@
     border: 2px solid black;
     border-radius: 50%;
     font-size: 25px;
+    text-align: center;
+    pointer-events: auto;
 }
 
 .logo-circ {
@@ -42,6 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: auto;
 }
 
 .rowUp {
