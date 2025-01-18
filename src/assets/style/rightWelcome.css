@@ -94,7 +94,15 @@
     font-size: 50px;
     font-family: QaskinBlackSambung;
     font-weight: bolder;
-    color: pink;
+    color: rgb(230, 79, 104);
+    -webkit-text-stroke: 0.1px #da7cab;
+}
+
+.rightWelcomeMid div {
+    height: 20px !important;
+    vertical-align: middle;
+    font-size: auto;
+    text-align: center;
 }
 
 .stroked-text {
@@ -103,6 +111,7 @@
     stroke-width: 0.3px;
     font-family: BrandonGrotesque;
     font-weight: bold;
+    -webkit-text-stroke: 0.2px black;
 }
 
 .rightWelcomeTop svg {
@@ -112,8 +121,7 @@
 
 .rightWelcomeBottom {
     font-size: 30px;
-    font-family: BrandonGrotesque;
-    font-weight: bolder;
-    color: pink;
-    /* -webkit-text-stroke: 0.3px black; */
+    font-family: BrandonGrotesque2;
+    color: rgb(230, 79, 104);
+    -webkit-text-stroke: 0.1px #da7cab;
 }

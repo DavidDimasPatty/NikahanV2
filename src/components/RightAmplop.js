@@ -32,7 +32,7 @@ const RightAmplop = () => {
                                 <img src={logoBCA} className="logoBank" />
                             </div>
                             <div className="atasNamaBank d-flex justify-content-center align-items-center">
-                                FENDY SANTOSO
+                                EFENDY SANTOSO
                             </div>
                             <div className="nomorRekeningBank d-flex justify-content-center align-items-center mt-3">
                                 57704125789
@@ -42,7 +42,7 @@ const RightAmplop = () => {
 
 
                     <div className="wrapperCopyNoBankButton d-flex justify-content-center align-items-center">
-                        <button className="copyNoBankButton" onClick={handleCopy}><i className="bi bi-clipboard-fill me-2 text-dark" />Copy No. Rekening</button>
+                        <button className="copyNoBankButton" onClick={handleCopy}><i className="bi bi-clipboard-fill me-2" />Copy No. Rekening</button>
                     </div>
 
                     <center className={`bankCopy ${copied?`copied`:``}`}>

@@ -50,11 +50,13 @@
 }
 
 .copyNoBankButton {
+    font-family: BrandonGrotesque2;
     border: 4px pink solid;
     border-radius: 20px;
     width: 300px;
     height: 40px;
     box-shadow: 0px 8px 16px rgb(247, 137, 155);
+    color: rgb(247, 137, 155);
 }
 
 .namaBank {

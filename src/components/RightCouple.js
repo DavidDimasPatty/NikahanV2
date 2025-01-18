@@ -30,9 +30,9 @@ const RightCouple = () => {
                     </div>
                 </div>
 
-                <div className="pinkRibbon">
+                {/* <div className="pinkRibbon">
                     <img src={pinkRibbon} className="pinkRibbonImg" />
-                </div>
+                </div> */}
 
                 {/* <div className="balon1">
                     <img src={balon1} className="balon1Img" />
@@ -61,12 +61,12 @@ const RightCouple = () => {
                     <div className="manPhotoWrapper d-flex justify-content-center align-items-center animate-on-scroll">
                         <div>
                             <img src={manPhoto} className="manPhoto" />
-                            <div className="gif1Man">
+                            {/* <div className="gif1Man">
                                 <img src={gifLove1} className="gifLove1Man" />
                             </div>
                             <div className="gif3Man">
                                 <img src={gifLove3} className="gifLove3Man" />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
@@ -99,12 +99,12 @@ const RightCouple = () => {
                     <div className="womanPhotoWrapper d-flex justify-content-center align-items-center animate-on-scroll">
                         <div>
                             <img src={womanPhoto} className="manPhoto" />
-                            <div className="gif1Woman">
+                            {/*<div className="gif1Woman">
                                 <img src={gifLove1} className="gifLove1Woman" />
                             </div>
                             <div className="gif3Woman">
                                 <img src={gifLove3} className="gifLove3Woman" />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

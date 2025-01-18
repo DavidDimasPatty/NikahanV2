@@ -1,3 +1,8 @@
+
+.body{
+    background-color: #E0CCD7;
+}
+
 .homeAll {
     width: 100vw;
     height: 100vh;
@@ -84,7 +89,7 @@
 }
 
 .leftMidBottom {
-    height: 200px;
+    height: 500px;
     font-size: 20px;
     font-family: BrandonGrotesque;
     font-weight: bolder;

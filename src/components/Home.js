@@ -134,7 +134,7 @@ const Home = () => {
                                         Our Wedding Invitation
                                     </div>
                                     <div className="leftMidTop">
-                                        Fendy Santoso & Bumi Ayu
+                                        Efendy Santoso & Bumi Ayu
                                     </div>
                                 </div>
                                 <div className="leftMid">

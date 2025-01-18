@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import namaWoman from "../assets/image/namaWoman.png"
 import "../assets/style/rightLocation.css"
-import leftFlower from "../assets/image/BackgroundImage/leftFlower.png"
+import leftFlower from "../assets/image/BackgroundImage/leftFlower.png";
+import bunga from "../assets/image/BackgroundImage/bunga.png";
 import rightFlower from "../assets/image/BackgroundImage/rightFlower.png"
 import gifLove2 from "../assets/gif/gifLove2.gif"
 import littleDoll from "../assets/gif/littletdoll.gif"
@@ -20,20 +21,20 @@ const RightLocation = () => {
     const googleMapsLinkWedding = `https://www.google.com/maps?q=JAGAT OFFICE BUILDING (JOB)`;
     return (
         <div className="wrapperLocationRight d-flex justify-content-center align-items-center">
-            <div className="gifLove2">
+            {/* <div className="gifLove2">
                 <img src={gifLove2} className="gifLove2Img" />
             </div>
             <div className="gifLove22">
                 <img src={gifLove2} className="gifLove22Img" />
-            </div>
+            </div> */}
             <div className="locationRight animate-on-scroll ">
                 <div>
                     <div className="leftFlower">
-                        <img src={leftFlower} className="leftFlowerImg" />
+                        <img src={bunga} className="leftFlowerImg" />
                     </div>
-                    <div className="rightFlower">
+                    {/* <div className="rightFlower">
                         <img src={rightFlower} className="rightFlowerImg" />
-                    </div>
+                    </div> */}
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="customCardRight">
                             <div className="pemberkatanRight">

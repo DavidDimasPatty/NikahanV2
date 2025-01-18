@@ -48,9 +48,9 @@ const RightWelcome = () => {
                         </div> */}
                         <div className="rightWelcomeMid">
                             Efendy Santoso
-                            <br />
-                            &
-                            <br />
+                            <div className="d-flex justify-content-center align-items-center">
+                                &
+                            </div>
                             Bumi Ayu
                         </div>
                         <div className="rightWelcomeBottom">
