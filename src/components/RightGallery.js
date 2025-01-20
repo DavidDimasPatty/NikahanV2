@@ -14,28 +14,8 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const RightGallery = () => {
 
-    const carouselRef = useRef(null);
-
-    const handleTouchStart = (e) => {
-        carouselRef.current.startY = e.touches[0].clientY;
-        carouselRef.current.startX = e.touches[0].clientX;
-    };
-
-    const handleTouchMove = (e) => {
-        const deltaY = e.touches[0].clientY - carouselRef.current.startY;
-        const deltaX = e.touches[0].clientX - carouselRef.current.startX;
-
-        if (Math.abs(deltaY) > Math.abs(deltaX)) {
-            // Allow vertical scroll
-            e.stopPropagation();
-        }
-    };
-
     return (
-        <div className="wrapperRightGalleryAll"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            ref={carouselRef}>
+        <div className="wrapperRightGalleryAll">
             <div className="rightGalleryAll">
                 <Carousel
                     showArrows={true}
@@ -46,7 +26,7 @@ const RightGallery = () => {
                     interval={3000}
                     infiniteLoop={true}
                     showThumbs={true}
-                // fade={true}
+                    fade={true}
                 >
                     <div className="imageCarrouselRight">
                         <img src={leftImage1} />

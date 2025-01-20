@@ -2,13 +2,15 @@
     position: relative;
     /* height: 450px; */
     width: 100%;
-    pointer-events: none !important;
+    /* pointer-events: none !important; */
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
 }
 
 .rightGalleryAll {
     height: 100%;
     width: 100%;
-    pointer-events: auto;
+    /* pointer-events: auto; */
 }
 
 .imageCarrouselRight {
