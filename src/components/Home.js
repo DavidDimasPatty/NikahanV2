@@ -194,6 +194,7 @@ const Home = () => {
                         <div className="imageCarrousel">
                             <img src={leftImage6} className="imageCarrouselImg" />
                         </div>
+                        
                         {/* <div className="imageCarrousel">
                                 <img src={leftImage7} />
                             </div>
