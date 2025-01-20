@@ -33,9 +33,11 @@
 
 .control-arrow.control-prev {
     pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .control-arrow.control-next {
+    background-color: rgba(0, 0, 0, 0.4) !important;
     pointer-events: auto;
 }
 
