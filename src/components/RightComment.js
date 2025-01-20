@@ -5,6 +5,8 @@ import "../assets/style/rightComment.css";
 import bunga1 from "../assets/image/wishbox-bunga1.png"
 
 const RightComment = ({ guest }) => {
+    const urlApi = "https://localhost:7097/api/UndanganNikah";
+
     const nama = guest || "Tamu Undangan";
     const [ucapan, setUcapan] = useState("");
     const [kehadiran, setKehadiran] = useState("Pilih");
@@ -102,7 +104,7 @@ const RightComment = ({ guest }) => {
         };
 
         try {
-            const response = await axios.post("https://localhost:7097/api/UndanganNikah", data, {
+            const response = await axios.post(urlApi, data, {
                 headers: { "Content-Type": "application/json" },
             });
             if (response.status === 200) {
@@ -139,7 +141,7 @@ const RightComment = ({ guest }) => {
     // Fungsi untuk fetch data komentar
     const fetchComments = async () => {
         try {
-            const response = await axios.get("https://localhost:7097/api/UndanganNikah");
+            const response = await axios.get(urlApi);
             setComments(response.data);
         } catch (error) {
             // console.error("Gagal mengambil komentar:", error);
