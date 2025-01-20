@@ -8,21 +8,39 @@
 .rightGalleryAll {
     height: 100%;
     width: 100%;
-    pointer-events: auto;
+    pointer-events: none !important;
 }
 
 .imageCarrouselRight {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center; /* Untuk memastikan gambar terpusat jika perlu */
-    align-items: center; /* Agar gambar terpusat secara vertikal */
+    justify-content: center;
+    /* Untuk memastikan gambar terpusat jika perlu */
+    align-items: center;
+    /* Agar gambar terpusat secara vertikal */
 }
 
 .imageCarrouselRight img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.control-dots {
+    pointer-events: auto;
+}
+
+.control-arrow.control-prev {
+    pointer-events: auto;
+}
+
+.control-arrow.control-next {
+    pointer-events: auto;
+}
+
+.thumbs-wrapper.axis-vertical{
+    pointer-events: auto;
 }
 
 /* .rightGalleryAll .carousel-root .carousel-slider {
