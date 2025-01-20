@@ -35,7 +35,7 @@ const RightAmplop = () => {
                                 EFENDY SANTOSO
                             </div>
                             <div className="nomorRekeningBank d-flex justify-content-center align-items-center mt-3">
-                                57704125789
+                                2684115366
                             </div>
                         </div>
                     </div>
@@ -45,9 +45,9 @@ const RightAmplop = () => {
                         <button className="copyNoBankButton" onClick={handleCopy}><i className="bi bi-clipboard-fill me-2" />Copy No. Rekening</button>
                     </div>
 
-                    <center className={`bankCopy ${copied?`copied`:``}`}>
-                            <p style={{ color: 'white', marginTop: '10px' }}>Nomor Rekening Berhasil Disalin!</p>
-                     </center>
+                    <center className={`bankCopy ${copied ? `copied` : ``}`}>
+                        <p style={{ color: 'white', marginTop: '10px' }}>Nomor Rekening Berhasil Disalin!</p>
+                    </center>
                 </div>
             </div>
         </div>
