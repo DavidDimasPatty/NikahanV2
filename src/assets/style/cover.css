@@ -30,6 +30,12 @@
     src: url('../font/Brandon_bld.otf') format('truetype');
 }
 
+
+@font-face {
+    font-family: 'BrandonGrotesqueItalic';
+    src: url('../font/Brandon_reg_it.otf') format('truetype');
+}
+
 .coverAll {
     position: absolute;
     background: white;

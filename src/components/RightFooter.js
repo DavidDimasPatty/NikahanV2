@@ -14,9 +14,9 @@ const RightFooter = () => {
                     <div className="text-center companyUs">
                         iKōdora
                     </div>
-                    <div className="logoIgWrapper text-center mt-2">
+                    {/* <div className="logoIgWrapper text-center mt-2">
                         <img src={instagram} className="logoIg" />
-                    </div>
+                    </div> */}
                     <div className="text-center mt-3 backSound">
                         BACKSOUND BY:
                     </div>
