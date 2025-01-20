@@ -2,6 +2,9 @@
     height: 100%;
     width: 100%;
     background-color: #E0CCD7;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    overflow: hidden;
 }
 
 .imgWelcomeRight {

@@ -35,17 +35,6 @@ const RightWelcome = () => {
             <div className="wrapperTextWelcomeRight">
                 <div>
                     <div className="textWelcomeRight">
-                        {/* <div className="rightWelcomeTop">
-                             <svg width="300" height="100" viewBox="0 0 200 100">
-                            <path id="curve" d="M 10 100 Q 100 30 250 100" fill="transparent" />
-                            <text>
-                                <textPath href="#curve" startOffset="50%" text-anchor="middle" class="stroked-text">
-                                    Our Weeding 
-                             </textPath> 
-                             </text>
-                        </svg> 
-                            Our Weeding
-                        </div> */}
                         <div className="rightWelcomeMid">
                             Efendy Santoso
                             <div className="d-flex justify-content-center align-items-center">

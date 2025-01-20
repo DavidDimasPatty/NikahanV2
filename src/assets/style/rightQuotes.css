@@ -22,7 +22,7 @@
 
 .quotesRight {
     font-size: 25px;
-    font-family: BrandonGrotesque;
+    font-family: BrandonGrotesque2;
     font-weight: bolder;
     /* color: white;
     -webkit-text-stroke: 0.3px pink; */
@@ -36,12 +36,13 @@
 
 .authorRight {
     font-size: 20px;
-    font-family: BrandonGrotesque;
+    font-family: BrandonGrotesque2;
     font-weight: bold;
     color: #541214;
     /* color: white;
     -webkit-text-stroke: 0.2px pink; */
     width: 80%;
+    margin-bottom: 50px;
 }
 
 .contentQuotesRight div {

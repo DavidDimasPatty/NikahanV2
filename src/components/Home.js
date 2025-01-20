@@ -39,6 +39,7 @@ const Home = () => {
 
     const toggleFront = () => {
         setFrontWelcome(!frontWelcome);
+        document.getElementById("audioBG").volume = 0.7;
         playAudio();
     }
 
@@ -140,7 +141,7 @@ const Home = () => {
             <Cover onDone={toggleFront} frontWelcome={frontWelcome} guest={guestInvite} loadScreen={loadingScr} />
             <Floating scroll={isDown} scrollContainerRef={scrollContainerRef} tooglePlay={togglePlay} isPlaying={isPlaying} />
             <div className="contentAll">
-                <audio ref={audioRef} src={backSound} preload="auto" autoPlay loop />
+                <audio ref={audioRef} src={backSound} preload="auto" id="audioBG" autoPlay loop />
                 <div className="leftContent">
                     <div className="colCarrousel">
                         <div className="contentLeft">
