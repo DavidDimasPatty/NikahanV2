@@ -1,11 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import namaWoman from "../assets/image/namaWoman.png"
 import "../assets/style/rightLocation.css"
-import leftFlower from "../assets/image/BackgroundImage/leftFlower.png";
 import bunga from "../assets/image/BackgroundImage/bunga.png";
-import rightFlower from "../assets/image/BackgroundImage/rightFlower.png"
-import gifLove2 from "../assets/gif/gifLove2.gif"
-import littleDoll from "../assets/gif/littletdoll.gif"
 const RightLocation = () => {
     const locationPemberkatan = {
         latitude: -6.144820107864263,

@@ -3,12 +3,6 @@ import "../assets/style/rightCouple.css"
 import womanPhoto from "../assets/image/girlPhoto.jpg"
 import manPhoto from "../assets/image/boyPhoto.jpg"
 import coupleDiamond from "../assets/image/coupleDiamond.png"
-import gifLove1 from "../assets/gif/gifLove.gif"
-import gifLove2 from "../assets/gif/gifLove2.gif"
-import gifLove3 from "../assets/gif/gifLove3.gif"
-import pinkRibbon from "../assets/image/BackgroundImage/pinkRebon.png"
-import balon1 from "../assets/image/BackgroundImage/baloon-removebg-preview.png"
-import balon3 from "../assets/image/BackgroundImage/baloon3-removebg-preview.png"
 const RightCouple = () => {
 
     return (

@@ -2,10 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { formatDistanceToNow, parseISO } from "date-fns";
 import "../assets/style/rightComment.css";
-import bunga1 from "../assets/image/wishbox-bunga1.png"
 
 const RightComment = ({ guest }) => {
-    const urlApi = "https://localhost:7097/api/UndanganNikah";
+    // const urlApi = "https://localhost:7097/api/UndanganNikah";
+
+     const urlApi = "https://api-wedding-efendybumi.ikodora.com/api/UndanganNikah";
 
     const nama = guest || "Tamu Undangan";
     const [ucapan, setUcapan] = useState("");

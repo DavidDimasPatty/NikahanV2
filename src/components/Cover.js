@@ -2,7 +2,7 @@ import React from "react";
 import "../assets/style/cover.css"
 import namaMan from "../assets/image/namaMan.png"
 import namaWoman from "../assets/image/namaWoman.png"
-import coverImage from "../assets/image/coverImage.jpg"
+import coverImageTemp from "../assets/image/coverImageTemp.jpg"
 const Cover = ({ onDone, frontWelcome, guest,loadScreen }) => {
 
     const handleClick = () => {
@@ -17,7 +17,7 @@ const Cover = ({ onDone, frontWelcome, guest,loadScreen }) => {
                 </div>
            </div>
             <div className="coverImage">
-                <img src={coverImage} className="coverImageImg" />
+                <img src={coverImageTemp} className="coverImageImg" />
             </div>
             <div className="coverWrapper">
                 <div className="coverTop d-flex justify-content-center">

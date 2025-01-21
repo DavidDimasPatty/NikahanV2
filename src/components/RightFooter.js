@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../assets/style/rightFooter.css"
-import instagram from "../assets/image/instagram.png"
 
 const RightFooter = () => {
 
