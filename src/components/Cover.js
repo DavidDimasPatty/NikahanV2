@@ -3,7 +3,7 @@ import "../assets/style/cover.css"
 import namaMan from "../assets/image/namaMan.png"
 import namaWoman from "../assets/image/namaWoman.png"
 import coverImageTemp from "../assets/image/coverImageTemp.jpg"
-const Cover = ({ onDone, frontWelcome, guest,loadScreen }) => {
+const Cover = ({ onDone, frontWelcome, guest, loadScreen }) => {
 
     const handleClick = () => {
         onDone();
@@ -11,13 +11,13 @@ const Cover = ({ onDone, frontWelcome, guest,loadScreen }) => {
 
     return (
         <div className={`coverAll${frontWelcome ? " " : " done"} d-flex justify-content-center align-items-center`}>
-           <div className={`loadScreen ${loadScreen? " ": " done"} d-flex justify-content-center align-items-center`}>
+            <div className={`loadScreen ${loadScreen ? " " : " done"} d-flex justify-content-center align-items-center`}>
                 <div className="loadScreenContent">
-                        Please Wait.....
+                    Please Wait.....
                 </div>
-           </div>
+            </div>
             <div className="coverImage">
-                <img src={coverImageTemp} className="coverImageImg" />
+                <img src={coverImageTemp} className="coverImageImg" loading="lazy" />
             </div>
             <div className="coverWrapper">
                 <div className="coverTop d-flex justify-content-center">
@@ -26,13 +26,15 @@ const Cover = ({ onDone, frontWelcome, guest,loadScreen }) => {
                 <div className="coverMid d-flex justify-content-center">
                     <div>
                         <div className="nameManCoverMid">
-                            <img src={namaMan} className="nameManCover" />
+                            {/* <img src={namaMan} className="nameManCover" /> */}
+                            Efendy Santoso
                         </div>
                         <div className="bridgeCoverMid">
                             &
                         </div>
                         <div className="nameWomanCoverMid">
-                            <img src={namaWoman} className="nameFemaleCover" />
+                            {/* <img src={namaWoman} className="nameFemaleCover" /> */}
+                            Bumi Ayu
                         </div>
                     </div>
                 </div>

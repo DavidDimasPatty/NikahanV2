@@ -110,7 +110,6 @@
     font-family: QaskinBlackSambung;
     font-weight: bolder;
     color: rgb(230, 79, 104);
-    -webkit-text-stroke: 0.1px #da7cab;
 }
 
 .rightWelcomeMid div {
@@ -138,5 +137,4 @@
     font-size: 30px;
     font-family: BrandonGrotesque2;
     color: rgb(230, 79, 104);
-    -webkit-text-stroke: 0.1px #da7cab;
 }
